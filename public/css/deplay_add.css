@@ -1,0 +1,68 @@
+.fengji:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.deploy-btn-contianer{
+	margin-bottom:10px;
+}
+.deploy-btn-contianer>.btn{
+	margin:0px 10px;
+	
+}
+.tabContainer .nav.nav-tabs{	
+	margin:0px;
+}
+.tabContainer .nav.nav-tabs>li{
+	width:120px;
+	height:42px;
+}
+
+.tabContainer .nav.nav-tabs>li>a{
+	width:100%;
+	display:block;
+	height:100%;
+	text-align:center;
+	padding:0px;
+}
+.input-edit{
+	width:100%;
+	display:block;
+	height:100%;
+	text-align:center;
+	border:0px;
+}
+.tabContainer .nav-tabs > li.active > a, .tabContainer .nav-tabs > li.active > a:hover, .tabContainer .nav-tabs > li.active > a:focus,.tabContainer .nav > li > a:hover, .tabContainer .nav > li > a:focus{
+	
+	border-top-color:transparent;
+	border-bottom-color:transparent;
+}
+.tabContainer .nav-tabs > li > a{
+	border-radius:0px;
+}
+.tabContainer  .deploy-table{
+	margin:0px;
+	padding:0px;
+}
+.tabContainer  .deploy-table>li{
+	list-style:none;
+	line-height:40px;
+	padding-left:10px;
+	overflow:hidden;	
+}
+.tabContainer  .deploy-table>li.deploy-list-none{
+	
+}
+.deploy-list-none>.pull-left>span{
+/*	visibility: hidden;*/
+display:none;
+}
+.right-btn>.btn{
+	margin:0px 10px;
+	padding:5px 15px;
+}
+.deploy-list-none .editLi{
+	border:0px;
+	min-width:180px;
+	margin-left:14px;
+}

@@ -1,0 +1,86 @@
+.fengji:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+.input-color{
+	float:left; 
+	width:200px;
+	height:100%;
+
+	border-width:2px 0px 2px 2px ;
+	border-radius: 4px 0px 0px 4px
+}
+.btn-show{
+	float:left;
+	height:100%;
+	padding:0px 10px;
+	border-radius: 0px 4px 4px 0px;
+	border:0px;
+	margin-right:20px;
+}
+.deploy-btn{
+	margin-right:10px;
+}
+.myModal .modal-dialog{
+	width:800px;
+	
+}
+.myModal .modal-dialog .modal-header{
+	padding:5px 10px;
+	border:0px;
+}
+.myModal .modal-dialog {
+	border:0px;
+}
+.myModal .modal-dialog .modal-body{
+	margin:10px 10px 0px 10px;
+	height:600px;
+	padding:0px;
+	border-bottom:0px
+}
+.myModal .modal-dialog .modal-footer{
+	margin:0px 10px 10px 10px;
+	padding:10px 0px 0px 0px;
+}
+.myModal .modal-dialog .modal-footer .bottom-btn{
+	padding:5px;
+}
+.myModal .modal-body .nav-tabs{
+	margin:0px;
+}
+.myModal .modal-body .nav-tabs > li > a{
+	border-radius:0px;
+}
+
+.modal .nav-tabs > li.active > a, .modal .nav-tabs > li.active > a:hover, .modal .nav-tabs > li.active > a:focus,.modal .nav > li > a:hover, .modal .nav > li > a:focus{
+	
+	border-top-color:transparent;
+	border-bottom-color:transparent;
+}
+
+ .myModal .modal-dialog .modal-body .tab-content{
+	height:545px;
+	overflow:hidden;
+}
+ .myModal .modal-dialog .modal-body .tab-content .tab-pane{
+ 	height:545px;
+ }
+.deploy-table{
+	margin:0px;
+	padding:0px;
+	overflow:hidden;
+}
+.deploy-table>li{
+	list-style:none;
+	line-height:30px;
+	padding-left:10px;
+	/*border-bottom:1px solid #999;*/
+	
+}
+.deploy-list-none>span{
+	visibility: hidden;
+}
+.deploy-list-none{
+	cursor:pointer;
+}

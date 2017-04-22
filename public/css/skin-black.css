@@ -1,0 +1,969 @@
+@import url(styles.css);
+/* 全局 */
+body {
+	background-color: #282828;
+	color: #999;
+}
+.text-light {
+	color: #fff;
+}
+.text-dim {
+	color: #555 !important;
+}
+a:link {
+	color: #ccc;
+}
+a:visited {
+	color: #ccc;
+}
+a:hover {
+	color: #fff;
+}
+a:active {
+	color: #ccc;
+}
+.modal a:hover {
+	color: #666;
+}
+.page-header {
+	border-bottom-color: #363636;
+}
+.fan-panel-hd big.text-success,.table .text-success, .info-panel .text-success  {
+	color: #bfa;
+}
+.fan-panel-hd big.text-warning,.table .text-warning, .info-panel .text-warning {
+	color: #ff9;
+}
+.fan-panel-hd big.text-danger,.table .text-danger, .info-panel .text-danger {
+	color: #fba;
+}
+.fan-panel-hd big.text-info,.table .text-info, .info-panel .text-info {
+	color: #aef;
+}
+.fan-panel-hd big.text-muted,.table .text-muted, .info-panel  .text-muted {
+	color: #ccc;
+}
+/* 头部 */
+#header {
+	background-color: #505050;
+	border-bottom: 1px solid #333;
+}
+.logo {
+	border-right-color: #3c3c3c;
+}
+.logo a {
+	color: #fff;
+}
+.wind-farm-name {
+	border-right-color: #3c3c3c;
+	color: #fff;
+}
+.skin-btn {
+	border-left-color: #3c3c3c;
+}
+.favorite .glyphicon {
+	color: #fff;
+}
+.member-info {
+	border-left-color: #3c3c3c;
+}
+/* 左栏 */
+#aside {
+	background-color: #3c3c3c;
+}
+.aside-arrow span.glyphicon {
+	color: #999;
+}
+.sidebar a {
+	background-color: #464646;
+	color: #999;
+}
+.sidebar a:hover, #aside .sidebar a.active {
+	background-color: #777;
+	color: #fff;
+}
+.sidebar>li>a {
+	background-color: #4c4c4c;
+	color: #ccc;
+}
+.sidebar>li>ul>li>ul>li>a {
+	background-color: #424242;
+}
+/* 导航（临时） */
+#nav .nav-list>a {
+	border-left-color: #505050;
+}
+#nav .nav-list>a:nth-last-child(1) {
+	border-right-color: #505050;
+}
+/* 导航 */
+#nav {
+	background-color: #3c3c3c;
+	border-color: #505050;
+	color: #777;
+}
+#nav a:link {
+	color: #999;
+}
+#nav a:visited {
+	color: #999;
+}
+#nav a:hover {
+	color: #fff;
+}
+#nav .nav-list>li {
+	border-left-color: #505050;
+}
+#nav .nav-list>li:nth-last-child(1) {
+	border-right-color: #505050;
+}
+#nav .nav-list a:hover {
+	background-color: #383838;
+}
+#nav a:active {
+	color: #fff;
+}
+#nav .nav-list a.active {
+	background-color: #333;
+	color: #fff;
+}
+#nav .nav-list a.active:hover {
+	background-color: #333;
+}
+#nav .nav-list>li>ul {
+	border-color: #606060;
+}
+#nav .nav-list>li>ul>li {
+	border-color: #505050;
+}
+#nav .nav-list>li>ul a {
+	background-color: #333;
+}
+#nav .nav-list>li>ul a:hover {
+	background-color: #2d2d2d;
+}
+/* 右栏 */
+#article, #article2, #fanCon, #fanTable {
+	background-color: #282828;
+}
+/* 页脚 */
+#footer {
+	background-color: #141414;
+}
+/* 云端首页 */
+.menu-list li a {
+	color: #999;
+}
+.menu-list li a:hover {
+	color: #fff;
+}
+.menu-list a .menu-list-icon {
+	color: #fff;
+	background-color: #444;
+	border-color: #777;
+}
+.menu-list a:hover .menu-list-icon {
+	background-color: #777;
+	border-color: #777;
+}
+.menu-list .menu-list-lock-icon .glyphicon {
+	color: #eee;
+}
+.menu-list-01 a .menu-list-icon,.menu-list-01.menu-list-lock a:hover .menu-list-icon {
+	background-color: #471717;
+	border-color: #8d2d2d;
+}
+.menu-list-02 a .menu-list-icon,.menu-list-02.menu-list-lock a:hover .menu-list-icon {
+	background-color: #4a2901;
+	border-color: #935202;
+}
+.menu-list-03 a .menu-list-icon,.menu-list-03.menu-list-lock a:hover .menu-list-icon {
+	background-color: #4b3e00;
+	border-color: #967c00;
+}
+.menu-list-04 a .menu-list-icon,.menu-list-04.menu-list-lock a:hover .menu-list-icon {
+	background-color: #20321b;
+	border-color: #3f6335;
+}
+.menu-list-05 a .menu-list-icon,.menu-list-05.menu-list-lock a:hover .menu-list-icon {
+	background-color: #1f3b43;
+	border-color: #3e7685;
+}
+.menu-list-06 a .menu-list-icon,.menu-list-06.menu-list-lock a:hover .menu-list-icon {
+	background-color: #1f2843;
+	border-color: #3e4f85;
+}
+.menu-list-07 a .menu-list-icon,.menu-list-07.menu-list-lock a:hover .menu-list-icon {
+	background-color: #2f2341;
+	border-color: #5d4682;
+}
+.menu-list-08 a .menu-list-icon,.menu-list-08.menu-list-lock a:hover .menu-list-icon {
+	background-color: #41233c;
+	border-color: #824677;
+}
+.menu-list-01 a:hover .menu-list-icon {
+	background-color: #8d2d2d;
+	border-color: #8d2d2d;
+}
+.menu-list-02 a:hover .menu-list-icon {
+	background-color: #935202;
+	border-color: #935202;
+}
+.menu-list-03 a:hover .menu-list-icon {
+	background-color: #967c00;
+	border-color: #967c00;
+}
+.menu-list-04 a:hover .menu-list-icon {
+	background-color: #3f6335;
+	border-color: #3f6335;
+}
+.menu-list-05 a:hover .menu-list-icon {
+	background-color: #3e7685;
+	border-color: #3e7685;
+}
+.menu-list-06 a:hover .menu-list-icon {
+	background-color: #3e4f85;
+	border-color: #3e4f85;
+}
+.menu-list-07 a:hover .menu-list-icon {
+	background-color: #5d4682;
+	border-color: #5d4682;
+}
+.menu-list-08 a:hover .menu-list-icon {
+	background-color: #824677;
+	border-color: #824677;
+}
+/* 云端风场监控 */
+.cnmap-bg {
+	/*background-color: #2d2d2d;*/
+}
+/* 风场监控 */
+.info-panel {
+	background-color: #333;
+	
+	/*min-width:1630px;*/
+}
+.info-panel big.text-light{
+	color: #ff9;
+}
+.info-panel .ctrl-btn-group {
+	border-right-color: #111;
+}
+.icon-voice {
+	border-left-color: #111;
+}
+.fan-sample-con {
+	border-left-color: #111; 
+}
+.fan-panel-title {
+	background-color: #464646;
+	border-color: #505050;
+	color: #ccc;
+}
+.fan-panel-title dl.dl-horizontal dt {
+	border-right-color: #505050;
+	color: #fff;
+	font-weight: bold;
+}
+.fan-panel-title-hd {
+	border-right-color: #505050;
+}
+.fan-panel-title span {
+	color: #fff;
+}
+.fan-panel {
+	background-color: #333;
+}
+.fan-panel-hd, .fan-panel-ft {
+	background-color: #404040;
+	color: #999;
+}
+.fan-panel-bd-txt small {
+	color: #bbb;	
+}
+/* 服务器监控 */
+.server-panel-title {
+	background-color: #464646;
+	border-color: #505050;
+	color: #ccc;
+}
+.server-panel-title dl.dl-horizontal dt {
+	border-right-color: #505050;
+	color: #fff;
+	font-weight: bold;
+}
+.server-panel-title-hd {
+	border-right-color: #505050;
+}
+.server-panel-title span {
+	color: #fff;
+}
+.server-panel-group {
+	border-color: #444;
+}
+.server-panel-group-hd {
+	background-color: #333;
+}
+.server-panel {
+	background-color: #333;
+}
+.server-panel-hd, .server-panel-ft {
+	background-color: #404040;
+	color: #999;
+}
+/* 分页和表格 */
+#fanTable .fanTable-arrow {
+	background-color: #2b2b2b;
+	border-top-color: #404040;
+	border-bottom-color: #303030;
+}
+#fanTable .fanTable-arrow:hover {
+	background-color: #2e2e2e;
+	border-top-color: #444;
+	border-bottom-color: #333;
+}
+#fanTable .fanTable-arrow:before {
+	border-top-color: #555;
+}
+#fanTable .fanTable-arrow:hover:before {
+	border-top-color: #666;
+}
+#fanTable .fanTable-arrow.up:before {
+	border-bottom-color: #555;
+}
+#fanTable .fanTable-arrow.up:hover:before {
+	border-bottom-color: #666;	
+}
+.fan-page {
+	background-color: rgba(50,50,50,.6);
+}
+.fan-page li {
+	background-color: #000 \9;
+	background-color: rgba(0, 0, 0, 0);
+	border: 1px solid #fff;
+}
+.fan-page .active {
+	background-color: #fff;
+}
+/* 右下角弹出窗 */
+.panel.pop-box {
+	background-color: #282828; 
+}
+.panel .close {
+	color: #fff;
+}
+/* 风机页 */
+.fan-image {
+	background-color: #3c3c3c;
+	border-color: #505050;
+}
+/* 集成线路图 */
+.xb-list-4 .xb-block-a:nth-child(5):after {
+	background-color: #282828;
+}
+/* 视频监控 */
+.video-panel {
+	border-color: #444;
+}
+.video-panel-hd {
+	background-color: #333;
+}
+/* 风资源 */
+.wind-rsc-pan-arrow {
+	background-color: rgba(50,50,50,.8);
+	border-color: #444;
+	color: #fff;
+}
+.wind-rsc-pan-cont {
+	background-color: rgba(50,50,50,.8);
+	border-color: #444;
+}
+.wind-rsc-pan-cont .page-header {
+	border-color: rgba(255,255,255,.1);
+	color: rgba(255,255,255,.6);
+}
+.time-list {
+	border-color: #444;
+}
+.time-list li.active {
+	background-color: #444;
+}
+/* 表格 */
+caption {
+	color: #ddd;
+}
+.table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
+	border-color: #444;
+}
+.table-bordered {
+	border-color: #444;
+}
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+	border-top-color: #444;
+}
+.table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+	color: #fff;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+	background-color: #333;
+}
+.table-green.table-bordered > thead > tr > th, .table-green.table-bordered > tbody > tr > th, .table-green.table-bordered > tfoot > tr > th, .table-green.table-bordered > thead > tr > td, .table-green.table-bordered > tbody > tr > td, .table-green.table-bordered > tfoot > tr > td {
+	border-color: #3c763d;
+}
+.table-green.table > thead > tr > th, .table-green.table > tbody > tr > th, .table-green.table > tfoot > tr > th {
+	color: #3c763d;
+}
+.table-green.table > thead > tr > td, .table-green.table > tbody > tr > td, .table-green.table > tfoot > tr > td {
+	color: #3e8f3e;
+}
+.table-yellow.table > thead > tr > th, .table-yellow.table > tbody > tr > th, .table-yellow.table > tfoot > tr > th, .table-yellow.table > thead > tr > td, .table-yellow.table > tbody > tr > td, .table-yellow.table > tfoot > tr > td {
+	border-color: #8a6d3b;
+}
+.table-yellow.table > thead > tr > th, .table-yellow.table > tbody > tr > th, .table-yellow.table > tfoot > tr > th {
+	color: #8a6d3b;
+}
+.table-yellow.table > thead > tr > td, .table-yellow.table > tbody > tr > td, .table-yellow.table > tfoot > tr > td {
+	color: #eb9316;
+}
+.table-red.table-bordered > thead > tr > th, .table-red.table-bordered > tbody > tr > th, .table-red.table-bordered > tfoot > tr > th, .table-red.table-bordered > thead > tr > td, .table-red.table-bordered > tbody > tr > td, .table-red.table-bordered > tfoot > tr > td {
+	border-color: #a94442;
+}
+.table-red.table > thead > tr > th, .table-red.table > tbody > tr > th, .table-red.table > tfoot > tr > th {
+	color: #a94442;
+}
+.table-red.table > thead > tr > td, .table-red.table > tbody > tr > td, .table-red.table > tfoot > tr > td {
+	color: #b92c28;
+}
+.table-hover > tbody > tr:hover {
+	background-color: #444;
+	color: #fff;
+}
+/*.btn-top-bottom a:link {
+	color: #999;
+}
+.btn-top-bottom a:visited {
+	color: #ccc;
+}
+.btn-top-bottom a:hover {
+	color: #ccc;
+}
+.btn-top-bottom a:active {
+	color: #ccc;
+}
+.btn-top-bottom a.active {
+	color: #ccc;
+}*/
+.table > thead > tr > td.primary,
+.table > tbody > tr > td.primary,
+.table > tfoot > tr > td.primary,
+.table > thead > tr > th.primary,
+.table > tbody > tr > th.primary,
+.table > tfoot > tr > th.primary,
+.table > thead > tr.primary > td,
+.table > tbody > tr.primary > td,
+.table > tfoot > tr.primary > td,
+.table > thead > tr.primary > th,
+.table > tbody > tr.primary > th,
+.table > tfoot > tr.primary > th {
+	background-color: #428bca;
+}
+.table-hover > tbody > tr > td.primary:hover,
+.table-hover > tbody > tr > th.primary:hover,
+.table-hover > tbody > tr.primary:hover > td,
+.table-hover > tbody > tr:hover > .primary,
+.table-hover > tbody > tr.primary:hover > th {
+	background-color: #569ad7;
+}
+.table > thead > tr > td.active,
+.table > tbody > tr > td.active,
+.table > tfoot > tr > td.active,
+.table > thead > tr > th.active,
+.table > tbody > tr > th.active,
+.table > tfoot > tr > th.active,
+.table > thead > tr.active > td,
+.table > tbody > tr.active > td,
+.table > tfoot > tr.active > td,
+.table > thead > tr.active > th,
+.table > tbody > tr.active > th,
+.table > tfoot > tr.active > th {
+  background-color: #373737;
+}
+.table-hover > tbody > tr > td.active:hover,
+.table-hover > tbody > tr > th.active:hover,
+.table-hover > tbody > tr.active:hover > td,
+.table-hover > tbody > tr:hover > .active,
+.table-hover > tbody > tr.active:hover > th {
+  background-color: #4c4c4c;
+}
+.table > thead > tr > td.success,
+.table > tbody > tr > td.success,
+.table > tfoot > tr > td.success,
+.table > thead > tr > th.success,
+.table > tbody > tr > th.success,
+.table > tfoot > tr > th.success,
+.table > thead > tr.success > td,
+.table > tbody > tr.success > td,
+.table > tfoot > tr.success > td,
+.table > thead > tr.success > th,
+.table > tbody > tr.success > th,
+.table > tfoot > tr.success > th {
+  background-color: #2d372d;
+}
+.table-hover > tbody > tr > td.success:hover,
+.table-hover > tbody > tr > th.success:hover,
+.table-hover > tbody > tr.success:hover > td,
+.table-hover > tbody > tr:hover > .success,
+.table-hover > tbody > tr.success:hover > th {
+  background-color: #324432;
+}
+.table > thead > tr > td.info,
+.table > tbody > tr > td.info,
+.table > tfoot > tr > td.info,
+.table > thead > tr > th.info,
+.table > tbody > tr > th.info,
+.table > tfoot > tr > th.info,
+.table > thead > tr.info > td,
+.table > tbody > tr.info > td,
+.table > tfoot > tr.info > td,
+.table > thead > tr.info > th,
+.table > tbody > tr.info > th,
+.table > tfoot > tr.info > th {
+  background-color: #2d373b;
+}
+.table-hover > tbody > tr > td.info:hover,
+.table-hover > tbody > tr > th.info:hover,
+.table-hover > tbody > tr.info:hover > td,
+.table-hover > tbody > tr:hover > .info,
+.table-hover > tbody > tr.info:hover > th {
+  background-color: #32454c;
+}
+.table > thead > tr > td.warning,
+.table > tbody > tr > td.warning,
+.table > tfoot > tr > td.warning,
+.table > thead > tr > th.warning,
+.table > tbody > tr > th.warning,
+.table > tfoot > tr > th.warning,
+.table > thead > tr.warning > td,
+.table > tbody > tr.warning > td,
+.table > tfoot > tr.warning > td,
+.table > thead > tr.warning > th,
+.table > tbody > tr.warning > th,
+.table > tfoot > tr.warning > th {
+  background-color: #3c362c;
+}
+.table-hover > tbody > tr > td.warning:hover,
+.table-hover > tbody > tr > th.warning:hover,
+.table-hover > tbody > tr.warning:hover > td,
+.table-hover > tbody > tr:hover > .warning,
+.table-hover > tbody > tr.warning:hover > th {
+  background-color: #4e422f;
+}
+.table > thead > tr > td.danger,
+.table > tbody > tr > td.danger,
+.table > tfoot > tr > td.danger,
+.table > thead > tr > th.danger,
+.table > tbody > tr > th.danger,
+.table > tfoot > tr > th.danger,
+.table > thead > tr.danger > td,
+.table > tbody > tr.danger > td,
+.table > tfoot > tr.danger > td,
+.table > thead > tr.danger > th,
+.table > tbody > tr.danger > th,
+.table > tfoot > tr.danger > th {
+  background-color: #3a2c2c;
+}
+.table-hover > tbody > tr > td.danger:hover,
+.table-hover > tbody > tr > th.danger:hover,
+.table-hover > tbody > tr.danger:hover > td,
+.table-hover > tbody > tr:hover > .danger,
+.table-hover > tbody > tr.danger:hover > th {
+  background-color: #4a3030;
+}
+.table-sample-icon {
+	border-color: #444;
+}
+.table-sample-icon.table-sample-icon-primary {
+	background-color: #428bca;
+}
+.table-sample-icon.table-sample-icon-active {
+	background-color: #505050;
+}
+.table-sample-icon.table-sample-icon-success {
+	background-color: #2d372d;
+}
+.table-sample-icon.table-sample-icon-info {
+	background-color: #2d373b;
+}
+.table-sample-icon.table-sample-icon-warning {
+	background-color: #3c362c;
+}
+.table-sample-icon.table-sample-icon-danger {
+	background-color: #3a2c2c;
+}
+/* 面板 */
+.panel {
+	background-color: transparent;
+}
+.panel-default > .panel-heading {
+	color: #eee;
+	background-color: #353535;
+	background-image: none;
+ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff353535', endColorstr='#ff333333', GradientType=0);
+	border-color: #444;
+}
+.panel-default {
+	border-color: #444;
+}
+.panel-footer {
+	background-color: #303030;
+	border-top-color: #444;
+}
+.list-group-item {
+	background-color: transparent;
+	border-color: #444;
+}
+a.list-group-item:hover, a.list-group-item:focus {
+	color: #fff;
+	background-color: #444;
+}
+a.list-group-item .list-group-item-heading {
+	color: #ccc;
+}
+.panel-group .panel-heading + .panel-collapse > .list-group, .panel-group .panel-heading + .panel-collapse > .panel-body {
+	border-top: 1px solid #444;
+}
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+	background-color: #444;
+	border-color: transparent;
+	background-image: none;
+	text-shadow: none;
+ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff444444', endColorstr='#ff404040', GradientType=0);
+}
+/* 标签 */
+.nav-tabs {
+	border-bottom-color: #444;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+	color: #fff;
+	background-color: #282828;
+	border-color : #444;
+	border-bottom-color: transparent;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+	background-color: #333;
+	border-color: #333 #333 #444;
+}
+/* well */
+.well {
+	background-color: #353535;
+	background-image: none;
+	border-color: #444;
+}
+/* 分割线 */
+hr {
+    border-color: #363636;
+}
+/* 分页 */
+.pagination>.disabled>a, .pagination>.disabled>a:focus, .pagination>.disabled>a:hover, .pagination>.disabled>span, .pagination>.disabled>span:focus, .pagination>.disabled>span:hover {
+	color: #777;
+	background-color: #333;
+	border-color: #444;
+}
+.pagination>li>a, .pagination>li>span {
+	color: #aaa;
+	background-color: #333;
+	border-color: #444;
+}
+.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {
+	color: #fff;
+	background-color: #444;
+	border-color: #555
+}
+/* 按钮 */
+.btn-link {
+  color: #999;
+}
+.btn-link:hover,
+.btn-link:focus {
+  color: #fff;
+}
+/* 图片 */
+.img-thumbnail {
+    background-color: transparent;
+    border-color: #444;
+}
+/* 404页 */
+.bg-404 {
+	background-color: #282828;
+}
+
+/* 全局搜索的输入框*/
+.input-color{
+	background-color: #333;
+    color:#fff;
+    }
+
+
+/*.table-right-input{
+	width:100%;
+	height:100%;
+	background-color:#282828;
+	border:none;
+	color:#999;
+}
+.btn-radius{
+	width:20px;
+	height:20px;
+	border-radius:10px;
+	padding:0px;
+	margin:0px 10px;
+	margin-top:8px;
+}
+.chose-title{
+	cursor: pointer;
+}
+@media (min-width: 768px){
+    .form-horizontal .control-label{
+        padding-top:0px;
+    }
+}
+.panel-header, .panel-body{
+			border-color: #505050;
+		}
+.datagrid-header,.panel-body {
+		    background:#282828;
+		     color: #999; 
+		   
+}
+.datagrid-cell-rownumber{
+	
+	color:#999;
+			
+}
+.datagrid-header, .datagrid-td-rownumber{
+	color:#999;
+	background:#282828;
+}
+
+.datagrid-htable, .datagrid-btable, .datagrid-ftable{
+      	color: #999;
+      }
+.datagrid-row-over, .datagrid-header td.datagrid-header-over{		    
+		    color: #fff;
+		    cursor: default;
+		    background: #3c3c3c;
+		    }
+
+ .datagrid-btable tr.datagrid-row-selected{
+			background: #3c3c3c;
+    		color: #fff;
+		}
+
+.tree-expanded {
+    background: url(../images/tree_icons.png) no-repeat 0px 0px;
+}
+.tree-expanded-hover{
+	background: url(images/tree_icons.png) no-repeat -18px 0px;
+}
+.tree-collapsed {
+    background: url(images/tree_icons.png) no-repeat -50px 0px;
+}
+.table-right-input{
+		background-color:#282828;
+		color:#999;
+}
+
+.col-fan-right{
+	background:url(../images/w.png) no-repeat center top;
+	background-size:auto 100%;
+}
+.read-img{
+	background:url(../images/20170302180919.png)no-repeat left top;
+	background-size:contain;
+}
+.table-ul>.table-list:nth-child(odd){
+		background-color:#333;
+		color:#999;
+	
+	}
+.table-ul>.table-list:nth-child(even){
+		background-color:#444;
+		color:#999;border-color: #444;
+		
+	}
+.table-ul{
+		border:1px solid #444;
+	}*/
+	
+.input-color{
+	border:solid #337ab7;	
+}
+
+/*配置方案 的模态框*/
+.myModal .modal-content{
+	background-color:#16191E
+}
+.myModal .modal-header{
+	background-color:#273037;
+	color:#fff;
+}
+.close{
+	color:#fff;
+	text-shadow:0px 0px 0;
+}
+.close:hover, .close:focus{
+	color:#fff;
+}
+.myModal .modal-body{
+	background-color:#212A31;
+	border:1px solid #313942;
+	
+}
+.myModal .modal-dialog .modal-footer{
+	
+	border:1px solid #313942;
+}
+.myModal .modal-dialog .modal-footer .bottom-btn{
+	background-color:#212A31
+}
+.myModal .modal-body .nav-tabs{
+	background-color:#21262A;
+	color:#999;
+	border-bottom-color:#313942;
+}
+
+.modal .nav-tabs > li.active > a, .modal .nav-tabs > li.active > a:hover, .modal .nav-tabs > li.active > a:focus,.modal .nav > li > a:hover, .modal .nav > li > a:focus{
+	background-color:#212A31;
+	color:#fff;
+	border-color:#313942;
+	/*border-bottom-color:transparent;*/
+}
+.modal .deploy-table>li{
+	border-bottom:1px solid #313942;
+	color:#ccc;
+	
+}
+.modal .deploy-list{
+	background-color:#21262A;
+}
+
+.deploy-list-none-chosed{
+	background-color:#21262A;
+}
+/*添加配置树*/
+.tabContainer{
+	border:1px solid #505050;
+}
+.tabContainer .nav-tabs > li.active > a, .tabContainer .nav-tabs > li.active > a:hover, .tabContainer .nav-tabs > li.active > a:focus,.tabContainer .nav > li > a:hover, .tabContainer .nav > li > a:focus{
+	background-color:#333;
+	color:#fff;
+	border-color:#505050;
+}
+.tabContainer  .deploy-table>li{
+	border-bottom:1px solid #505050;
+	color:#ccc;
+	background-color:#333;
+}
+.tabContainer  .deploy-table>li.deploy-list{
+	background-color:#282828;
+}
+
+.tabContainer .nav-tabs > li.active > a>.input-edit{
+	background-color:#333;	
+	color:#999;
+}
+.tabContainer .nav-tabs > li > a>.input-edit{
+	background-color:#282828;	
+	color:#999;
+}
+.deploy-list-none .editLi{
+	background-color:#333;	
+	color:#999;
+}
+
+
+/*型号搜索页面*/
+.right-aisde{
+	background-color: #3c3c3c;
+}
+
+.right-sidebar li {
+   background-color: #4c4c4c;
+    color: #999;
+}
+
+.left-sidebar li {
+   background-color: #4c4c4c;
+    color: #999;
+}
+
+.center-title{
+	color:#ccc;
+}
+/*搜索显示的下拉列表*/
+.dropdown-menu{
+	background-color: #3c3c3c;
+    color: #999;
+	
+}
+.dropdown-menu>li{
+	
+}
+.dropdown-menu > li > a {
+	line-height:25px;
+	color:#999;
+}
+/*系统总览*/
+.overview-chose{
+	color: #ccc;
+    background-color: #353535;
+}
+.overview-chose dd{
+	color:#aaa;
+}
+.configure-title{
+	color:#ccc;
+}
+/*tab操作*/
+.tab-container{	
+	border-bottom:1px solid #444;
+}
+.tab-container>li.active{
+	background-color:#282828;
+	border:1px solid #444;	
+}
+
+.table-right-input{
+	background-color:#282828;
+	color:#aaa;
+	outline:none;
+}
+
+.overview-modal .modal-header {
+    
+    border-bottom: 1px solid #333;
+}
+.overview-modal{
+	color:#aaa;
+}
+.overview-modal .modal-content {
+    background-color: #16191E;
+}
+.overview-modal .modal-header{
+    
+    border-bottom: 1px solid #333;
+}
+.overview-modal .modal-footer {
+	border-top: 1px solid #333;
+}
+.overview-modal input{
+	background-color:#16191E;
+	border:1px solid #333;
+}
+.overview-modal input[type="checkbox"]{
+	
+	background:#282828;
+}
+.bottom-container{
+	background-color:#282828;
+}

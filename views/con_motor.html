@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="Author" content="F.Fang">
+  <meta name="Language" scheme="Language Codes" content="zh-CN">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>上海电气智能风电</title>
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/images/favicon.png" type="image/png">
+  <!-- Bootstrap -->
+  <link href="/css/bootstrap.css" rel="stylesheet">
+  <link href="/css/skin-black.css" rel="stylesheet" id="skinCss">
+  <!-- mCustomScrollbar 滚动条 -->
+  <link href="/css/jquery.mCustomScrollbar.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/deploy.css" />
+</head>
+<body>
+<!-- ***** HEADER ***** -->
+<header id="header">
+  <div class="logo pull-left"><a href="云端-首页.html" title="上海电气智能风电风云"><img src="images/logo.png" width="120" height="30"
+                                                                           alt="上海电气"> 智能风电<img
+          src="/images/logo-fengyun.png" width="40" height="30" alt="风云"></a>
+    <small>智能监控系统</small>
+  </div>
+  <div class="wind-farm-name pull-left"><img src="tmp/user-logo.jpg"> 临港风电场</div>
+  <div class="member-info pull-right"><span href="#">张三</span> <span class="dropdown"><a href="javascript:;" title="信息"
+                                                                                         class="dropdown-toggle"
+                                                                                         type="button"
+                                                                                         id="dropdownMenu1"
+                                                                                         data-toggle="dropdown"
+                                                                                         aria-haspopup="true"
+                                                                                         aria-expanded="true"> <span
+          href="" class="glyphicon glyphicon-envelope"></span><sup class="red-dot"></sup> </a>
+    <ul class="dropdown-menu dropdown-menu-right">
+      <li><a href="javascript:;">信息第一条</a></li>
+      <li><a href="javascript:;">我是第二条信息</a></li>
+      <li><a href="javascript:;">点我点我！我是No.3</a></li>
+      <li><a href="javascript:;">我是最后一条</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="javascript:;">查看全部消息</a></li>
+    </ul>
+    </span> <a href="#" class="glyphicon glyphicon-cog" title="设置"></a> <a href="本地风场-登录页.html"
+                                                                           class="glyphicon glyphicon-log-out"
+                                                                           title="退出"></a></div>
+  <ul class="skin-btn list-inline pull-right">
+    <li id="skinBlack" class="skin-btn-black active" title="黑"></li>
+    <li id="skinWhite" class="skin-btn-white" title="白"></li>
+    <li id="skinCyan" class="skin-btn-cyan" title="青"></li>
+    <li id="skinBlue" class="skin-btn-blue" title="蓝"></li>
+    <li id="skinGreen" class="skin-btn-green" title="绿"></li>
+    <li id="skinRed" class="skin-btn-red" title="红"></li>
+  </ul>
+</header>
+<!-- ***** /HEADER ***** -->
+<!-- ***** ASIDE ***** -->
+<aside id="aside">
+  <div class="aside-arrow"><span class="glyphicon glyphicon-menu-left"></span></div>
+  <ul class="sidebar">
+    <li>
+      <a href="javascript:;">
+        <!--<span class="pull-right glyphicon glyphicon-plus-sign  glyphicon-minus-sign"></span>-->
+        系统总览
+      </a>
+      <!--<ul>
+          <li><a href="#">实时数据查询</a></li>
+          <li><a href="#">风机实时整点报表</a></li>
+          <li><a href="#">风场数据查询</a></li>
+          <li><a href="#">实时数据统计</a></li>
+          <li><a href="#">电量查询</a></li>
+      </ul>-->
+    </li>
+    <li><a href="#"><span class="pull-right glyphicon glyphicon-plus-sign"></span>参数列表</a>
+      <ul>
+        <li>
+          <a href="#">全局搜索</a>
+
+        </li>
+        <li><a href="#">观察</a></li>
+        <li><a href="#" class="active">01--电机参数</a></li>
+        <li><a href="#">02--定子监视</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">配置树</a>
+    </li>
+
+  </ul>
+</aside>
+<!-- ***** /ASIDE ***** -->
+<!-- ***** NAV ***** -->
+<nav id="nav" class="nav-md">
+  <div class="bread-crumb"><strong>当前位置：</strong> <a href="云端-首页.html">云端首页</a> &gt; <a href="云端-智能监控-风场监控-视图.html">变流器监控</a>
+  </div>
+  <ul class="nav-list clearfix">
+    <li><a href="javascript:;"><span class="glyphicon glyphicon-eye-open"></span> 监控 <span class="caret"></span></a>
+      <ul>
+        <li><a href="本地风场-监控-风场页-视图.html"><span class="glyphicon glyphicon-eye-open"></span> 实时监控</a></li>
+        <li><a href="本地风场-能量管理-能量控制.html"><span class="glyphicon glyphicon-tasks"></span> 能量管理</a></li>
+        <li><a href="本地风场-实时对比.html"><span class="glyphicon glyphicon-equalizer"></span> 实时对比</a></li>
+      </ul>
+    </li>
+    <li><a href="本地风场-视频监控-首页.html"><span class="glyphicon glyphicon-facetime-video"></span> 视频监控</a></li>
+    <li><a href="本地风场-故障-故障处理.html"><span class="glyphicon glyphicon-alert"></span> 故障</a></li>
+    <li><a href="#"><span class="glyphicon glyphicon-th"></span> 报表</a></li>
+    <li><a href="本地风场-配置-风场配置-MODBUS发布模板.html"><span class="glyphicon glyphicon-th-list"></span> 配置</a></li>
+    <li><a href="本地风场-管理-分数据中心-认证.html"><span class="glyphicon glyphicon-cog"></span> 管理</a></li>
+    <li><a href="本地风场-健康值.html"><span class="glyphicon glyphicon-dashboard"></span> 健康值</a></li>
+    <li><a href="本地风场-CMS-图表.html"><span class="glyphicon glyphicon-copyright-mark"></span> CMS</a></li>
+    <li><a href="本地风场-风场介绍.html"><span class="glyphicon glyphicon-list-alt"></span> 风场介绍</a></li>
+  </ul>
+</nav>
+<!-- ***** /NAV ***** -->
+<!-- ***** ARTICLE ***** -->
+<article id="article" class="article-md clearfix">
+  <!-- MAIN -->
+  <div class="main clearfix">
+    <div class="info-panel clearfix" style="margin-top: 10px;">
+      <div class="form-horizontal" style="height:30px;">
+        <input type="search" placeholder="全局搜索"  id="search" data-provide="typeahead"class="input-color"
+               data-items="4"/>
+        <button class="btn btn-primary btn-sm btn-show"  >
+          <span class="glyphicon glyphicon-search"></span> 搜索
+        </button>
+        <button class="btn btn-primary btn-sm pull-left" style="margin-left: 20px" data-toggle="modal" data-target="#exampleModaladd" data-whatever="@mdo" data-backdrop="static"><span class="glyphicon glyphicon-plus"></span> 添加
+        </button>
+
+      </div>
+    </div>
+    <!-- 表格 -->
+    <table class="table table-bordered table-striped table-condensed">
+      <thead>
+      <tr>
+        <th style="width: 20px">读/写</th>
+        <th style="width: 50px">名称</th>
+        <th style="width: 50px">当前值</th>
+        <th style="width: 20px">单位</th>
+        <th style="width: 100px">描述</th>
+        <th style="width: 20px">ID</th>
+        <th style="width: 100px">操作</th>
+      </tr>
+      </thead>
+      <tbody>
+
+      <%alldata.wfInfo.forEach(function(fitems){%>
+      <tr>
+        <th>
+        <% if(fitems.access_type == 1){%>可写<%}%>
+        <% if(fitems.access_type == 0){%>可读<%}%>
+        </th>
+        <td><%= fitems.chaname%></td>
+        <th>-</th>
+        <th><%= fitems.varunit%></th>
+        <td><%= fitems.desc%></td>
+        <td><%= fitems.parameterId%></td>
+        <td>
+          <a href="#" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" data-toggle="modal" data-target="#myModal"
+             data-backdrop="static" class="cakan" objId = "<%= fitems._id%>">查看</a>&nbsp;&nbsp;
+          <a href="#" data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo" data-toggle="modal" data-target="#myModal"
+             data-backdrop="static" class="upd" objId = "<%= fitems._id%>">修改</a>&nbsp;&nbsp;
+          <a href="#">删除</a>&nbsp;&nbsp;
+          <a href="#" data-toggle="modal" data-target="#exampleModal3" data-whatever="@mdo" data-toggle="modal" data-target="#myModal"
+             data-backdrop="static">控制</a>&nbsp;&nbsp;
+          <a href="#">添加到观察</a>
+        </td>
+      </tr>
+      <%})%>
+
+
+
+
+
+      </tbody>
+    </table>
+    <!-- /表格 -->
+
+  </div>
+</article>
+<!-- ***** /ARTICLE ***** -->
+<!-- ***** FOOTER ***** -->
+<footer id="footer">版权所有 © 2015-2020 上海电气风电设备有限公司 建议使用IE9+ 浏览器 1280*1024 以上分辨率</footer>
+<!-- ***** /FOOTER ***** -->
+
+
+<input type="text" value="<%= alldata.templateName%>" id="templateName" />
+<input  type="text" value="<%= alldata.componentCode%>" id="componentCode"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--模态框 参数添加-->
+<div class="modal fade" id="exampleModaladd" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalLabel" >
+  <div class="modal-dialog" role="document" style="margin-top: 10px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" >添加</h4>
+      </div>
+      <div class="modal-body">
+        <p>参数基本信息</p>
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label  class="col-sm-4 control-label" >是否实时读取：</label>
+            <div class="col-sm-8">
+              <select  id="addisTime"  class="form-control ">
+                <option value="true">是</option>
+                <option value="false">否</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label  class="col-sm-4 control-label" >参数号（ID）：</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control "  placeholder="" maxlength="10" id="addparameterId">
+            </div>
+          </div>
+          <div class="form-group">
+            <label  class="col-sm-4 control-label" >读/写：</label>
+            <div class="col-sm-8">
+              <select id="addaccess_type"  class="form-control ">
+                <option value="1">只读</option>
+                <option value="0">只写</option>
+              </select>
+            </div>
+          </div>
+          <!--字典表-->
+          <div class="form-group">
+            <label  class="col-sm-4 control-label" >名称：</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control "  placeholder="" maxlength="30" id="addchineseDesc">
+            </div>
+          </div>
+          <div class="form-group">
+            <label  class="col-sm-4 control-label" >单位：</label>
+            <div class="col-sm-8">
+              <select   class="form-control " id="addvarUnit" >
+                <option  value="A">A</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label  class="col-sm-4 control-label" >最大值：</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control "  placeholder="" maxlength="30" id="addmax">
+            </div>
+          </div>
+          <div class="form-group">
+            <label  class="col-sm-4 control-label" >最小值：</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control "  placeholder="" maxlength="30" id="addmin">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label  class="col-sm-4 control-label" >解析方式：</label>
+            <div class="col-sm-8">
+              <select name="strategy" class="form-control  ze" id="addstrategy">
+                <option value="Whole">整个</option>
+                <option value="GetBit">二进制</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group  dd"><label  class="col-sm-4 control-label" >缩放比：</label><div class="col-sm-8"><input type="text" class="form-control" maxlength="30" placeholder="" id="addcoefficient"></div></div>
+          <div class="form-group  dd"><label  class="col-sm-4 control-label" >描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="adddesc"></div></div>
+
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="adddesc0"></div></div>
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="adddesc1"></div></div>
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="adddesc2"></div></div>
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="adddesc3"></div></div>
+
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="adddesc4"></div></div>
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="adddesc5"></div></div>
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="adddesc6"></div></div>
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="adddesc7"></div></div>
+
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="adddesc8"></div></div>
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="adddesc9"></div></div>
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="adddesc10"></div></div>
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="adddesc11"></div></div>
+
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="adddesc12"></div></div>
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="adddesc13"></div></div>
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="adddesc14"></div></div>
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="adddesc15"></div></div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">退出</button>
+        <button type="button" class="btn btn-primary" id="add">确认</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--/模态框-->
+<!--模态框 查看-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document" style="margin-top: 10px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">参数设置查看</h4>
+      </div>
+      <div class="modal-body">
+        <p>参数基本信息</p>
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label  class="col-sm-4 control-label" >是否实时读取：</label>
+            <div class="col-sm-8"  id="cakanisTime">
+            </div>
+          </div>
+          <div class="form-group">
+            <label  class="col-sm-4 control-label" >参数号（ID）：</label>
+            <div class="col-sm-8" id="cakanparameterId">
+
+            </div>
+          </div>
+          <div class="form-group">
+            <label  class="col-sm-4 control-label" >读/写：</label>
+            <div class="col-sm-8" id="cakanaccess_type">
+
+            </div>
+          </div>
+          <!--字典表-->
+          <div class="form-group">
+            <label  class="col-sm-4 control-label" >名称：</label>
+            <div class="col-sm-8" id="cakanchineseDesc">
+
+            </div>
+          </div>
+          <div class="form-group">
+            <label  class="col-sm-4 control-label" >单位：</label>
+            <div class="col-sm-8" id="cakanvarUnit">
+
+            </div>
+          </div>
+          <div class="form-group">
+            <label  class="col-sm-4 control-label" >最大值：</label>
+            <div class="col-sm-8" id="cakanmax">
+
+            </div>
+          </div>
+          <div class="form-group">
+            <label  class="col-sm-4 control-label" >最小值：</label>
+            <div class="col-sm-8" id="cakanmin">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label  class="col-sm-4 control-label" >解析方式：</label>
+            <div class="col-sm-8" id="cakanstrategy">
+
+            </div>
+          </div>
+
+          <div class="form-group  cakandd"><label  class="col-sm-4 control-label" >缩放比：</label><div class="col-sm-8"id="cakancoefficient"></div></div>
+          <div class="form-group  cakandd"><label  class="col-sm-4 control-label" >描述：</label><div class="col-sm-8" id="cakandesc"> </div></div>
+
+          <div class="form-group  cakancc" style="display:none"><label  class="col-sm-4 control-label" >[0]描述：</label><div class="col-sm-8" id="cakandesc0"></div></div>
+          <div class="form-group  cakancc" style="display:none"><label  class="col-sm-4 control-label" >[1]描述：</label><div class="col-sm-8" id="cakandesc1"></div></div>
+          <div class="form-group  cakancc" style="display:none"><label  class="col-sm-4 control-label" >[2]描述：</label><div class="col-sm-8" id="cakandesc2"></div></div>
+          <div class="form-group  cakancc" style="display:none"><label  class="col-sm-4 control-label" >[3]描述：</label><div class="col-sm-8" id="cakandesc3"></div></div>
+
+          <div class="form-group  cakancc" style="display:none"><label  class="col-sm-4 control-label" >[4]描述：</label><div class="col-sm-8" id="cakandesc4"></div></div>
+          <div class="form-group  cakancc" style="display:none"><label  class="col-sm-4 control-label" >[5]描述：</label><div class="col-sm-8" id="cakandesc5"></div></div>
+          <div class="form-group  cakancc" style="display:none"><label  class="col-sm-4 control-label" >[6]描述：</label><div class="col-sm-8" id="cakandesc6"></div></div>
+          <div class="form-group  cakancc" style="display:none"><label  class="col-sm-4 control-label" >[7]描述：</label><div class="col-sm-8" id="cakandesc7"></div></div>
+
+          <div class="form-group  cakancc" style="display:none"><label  class="col-sm-4 control-label" >[8]描述：</label><div class="col-sm-8" id="cakandesc8"></div></div>
+          <div class="form-group  cakancc" style="display:none"><label  class="col-sm-4 control-label" >[9]描述：</label><div class="col-sm-8" id="cakandesc9"></div></div>
+          <div class="form-group  cakancc" style="display:none"><label  class="col-sm-4 control-label" >[10]描述：</label><div class="col-sm-8" id="cakandesc10"></div></div>
+          <div class="form-group  cakancc" style="display:none"><label  class="col-sm-4 control-label" >[11]描述：</label><div class="col-sm-8" id="cakandesc11"></div></div>
+
+          <div class="form-group  cakancc" style="display:none"><label  class="col-sm-4 control-label" >[12]描述：</label><div class="col-sm-8" id="cakandesc12"></div></div>
+          <div class="form-group  cakancc" style="display:none"><label  class="col-sm-4 control-label" >[13]描述：</label><div class="col-sm-8" id="cakandesc13"></div></div>
+          <div class="form-group  cakancc" style="display:none"><label  class="col-sm-4 control-label" >[14]描述：</label><div class="col-sm-8" id="cakandesc14"></div></div>
+          <div class="form-group  cakancc" style="display:none"><label  class="col-sm-4 control-label" >[15]描述：</label><div class="col-sm-8" id="cakandesc15"></div></div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">退出</button>
+        <button type="button" class="btn btn-primary">确认</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--/模态框-->
+<!--模态框1 参数修改-->
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document" style="margin-top: 10px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" >参数设置修改</h4>
+      </div>
+      <div class="modal-body">
+        <p>参数基本信息</p>
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label  class="col-sm-4 control-label" >是否实时读取：</label>
+            <div class="col-sm-8">
+              <select  id="updisTime"  class="form-control ">
+                <option value="true">是</option>
+                <option value="false">否</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label  class="col-sm-4 control-label" >参数号（ID）：</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control "  placeholder="" maxlength="10" id="updparameterId">
+            </div>
+          </div>
+          <div class="form-group">
+            <label  class="col-sm-4 control-label" >读/写：</label>
+            <div class="col-sm-8">
+              <select id="updaccess_type"  class="form-control ">
+                <option value="1">只读</option>
+                <option value="0">只写</option>
+              </select>
+            </div>
+          </div>
+          <!--字典表-->
+          <div class="form-group">
+            <label  class="col-sm-4 control-label" >名称：</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control "  placeholder="" maxlength="30" id="updchineseDesc">
+            </div>
+          </div>
+          <div class="form-group">
+            <label  class="col-sm-4 control-label" >单位：</label>
+            <div class="col-sm-8">
+              <select   class="form-control " id="updvarUnit" >
+                <option  value="A">A</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label  class="col-sm-4 control-label" >最大值：</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control "  placeholder="" maxlength="30" id="updmax">
+            </div>
+          </div>
+          <div class="form-group">
+            <label  class="col-sm-4 control-label" >最小值：</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control "  placeholder="" maxlength="30" id="updmin">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label  class="col-sm-4 control-label" >解析方式：</label>
+            <div class="col-sm-8">
+              <select name="strategy" class="form-control  ze" id="updstrategy">
+                <option value="Whole">整个</option>
+                <option value="GetBit">二进制</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group  dd"><label  class="col-sm-4 control-label" >缩放比：</label><div class="col-sm-8"><input type="text" class="form-control" maxlength="30" placeholder="" id="updcoefficient"></div></div>
+          <div class="form-group  dd"><label  class="col-sm-4 control-label" >描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="upddesc"></div></div>
+
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >[0]描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="upddesc0"></div></div>
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >[1]描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="upddesc1"></div></div>
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >[2]描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="upddesc2"></div></div>
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >[3]描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="upddesc3"></div></div>
+
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >[4]描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="upddesc4"></div></div>
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >[5]描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="upddesc5"></div></div>
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >[6]描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="upddesc6"></div></div>
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >[7]描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="upddesc7"></div></div>
+
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >[8]描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="upddesc8"></div></div>
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >[9]描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="upddesc9"></div></div>
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >[10]描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="upddesc10"></div></div>
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >[11]描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="upddesc11"></div></div>
+
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >[12]描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="upddesc12"></div></div>
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >[13]描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="upddesc13"></div></div>
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >[14]描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="upddesc14"></div></div>
+          <div class="form-group  cc" style="display:none"><label  class="col-sm-4 control-label" >[15]描述：</label><div class="col-sm-8"><input type="text" class="form-control " maxlength="30" placeholder="" id="upddesc15"></div></div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">退出</button>
+        <button type="button" class="btn btn-primary" id="updQR">确认</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--/模态框1-->
+
+<!--模态框 参数设置控制-->
+<div class="modal fade" id="exampleModal3" tabindex="-1"  role="dialog"
+     aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document" style="margin-top: 10px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">参数设置控制</h4>
+      </div>
+      <div class="modal-body">
+        <p>参数基本信息</p>
+        <form class="form-horizontal">
+            控制
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">退出</button>
+        <button type="button" class="btn btn-primary">确认</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--/模态框-->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="/js/jquery-1.11.2.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/js/jquery.cookie.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<!-- mCustomScrollbar 滚动条 -->
+<script src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!--图表-->
+<script src="/js/echarts.js"></script>
+<!-- 全局 -->
+<script src="/js/script.js"></script>
+<!–[if IE]>
+<script src="/js/html5.js"></script>
+<![endif]–>
+<script src="/js/bootstrap3-typeahead.js"></script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script>
+$(".ze").change(function(){
+    if($(this).val()=="GetBit"){
+      $(".cc").show();
+      $(".dd").hide();
+    }else if($(this).val()=="Whole"){
+      $(".cc").hide();
+      $(".dd").show();
+    }
+});
+var name= new Date().getTime();
+var zdb = {//字典表
+  max: $("#addmax").val(),//必填 最大值
+  min: $("#addmin").val(),//必填最小值
+  calculateMethod: "",
+  updateId: "",
+  createId: "admin",
+  updateTime: "",
+  createTime: new Date().getTime()+"",
+  enable : 1,
+  desc3 : "",
+  desc2 : "",
+  desc1 : "",
+  alias3 : "",
+  alias2 : "",
+  alias1 : "",
+  source : "",
+  sourceCode : "",
+  varAttr : "",
+  savePeriod : 30,
+  varUnit : $("#addvarUnit").val(),
+  varAbbr : "",
+  chineseDesc : $("#adddesc").val(),//  必填中文描述
+  varChineseName : $("#addchineseDesc").val(), // 必填 中文名字
+  varType :"",
+  varName : name,  //对应AMS表中的Name
+  uid : "0700eb8c15ff504c86ee3891cb902155",  //对应AMS表中的Name
+  __v : 1
+};
+var  Whole = {
+  isTime: $("#addisTime").val(),//是否时时读取
+  parameterId: $("#addparameterId").val(),//参数Id
+  access_type:$("#addaccess_type").val(),//读写
+  valType:"collect",//collect采集  alarm 警告  fault警告
+  collectCode: "",//采集不需要
+  name:name+"", // 应该和字典表对应 需确认
+  ioTag:[{
+    desc: $("#adddesc").val(),// 描述
+    alias: "",
+    coefficient: $("#addcoefficient").val(),
+    strategy: "Whole",
+    index: 0,
+    length: 16
+  }],
+
+};
+var GetBit = {
+  isTime: $("#addisTime").val(),
+  parameterId: $("#addparameterId").val(),
+  access_type:$("#addaccess_type").val(),
+  valType:"collect",
+  collectCode: "",
+  name:name,
+  ioTag:[
+    {desc: $("#adddesc0").val(), alias: "", coefficient: $("#addcoefficient0").val(), strategy: "GetBit", index: 0, length: 1},
+    {desc: $("#adddesc1").val(), alias: "", coefficient: $("#addcoefficient1").val(), strategy: "GetBit", index: 1, length: 1},
+    {desc: $("#adddesc2").val(), alias: "", coefficient: $("#addcoefficient2").val(), strategy: "GetBit", index: 2, length: 1},
+    {desc: $("#adddesc3").val(), alias: "", coefficient: $("#addcoefficient3").val(), strategy: "GetBit", index: 3, length: 1},
+
+    {desc: $("#adddesc4").val(), alias: "", coefficient: $("#addcoefficient4").val(), strategy: "GetBit", index: 4, length: 1},
+    {desc: $("#adddesc5").val(), alias: "", coefficient: $("#addcoefficient5").val(), strategy: "GetBit", index: 5, length: 1},
+    {desc: $("#adddesc6").val(), alias: "", coefficient: $("#addcoefficient6").val(), strategy: "GetBit", index: 6, length: 1},
+    {desc: $("#adddesc7").val(), alias: "", coefficient: $("#addcoefficient7").val(), strategy: "GetBit", index: 7, length: 1},
+
+    {desc: $("#adddesc8").val(), alias: "", coefficient: $("#addcoefficient8").val(), strategy: "GetBit", index: 8, length: 1},
+    {desc: $("#adddesc9").val(), alias: "", coefficient: $("#addcoefficient9").val(), strategy: "GetBit", index: 9, length: 1},
+    {desc: $("#adddesc10").val(), alias: "", coefficient: $("#addcoefficient10").val(), strategy: "GetBit", index: 10, length: 1},
+    {desc: $("#adddesc11").val(), alias: "", coefficient: $("#addcoefficient11").val(), strategy: "GetBit", index: 11, length: 1},
+
+    {desc: $("#adddesc12").val(), alias: "", coefficient: $("#addcoefficient12").val(), strategy: "GetBit", index: 12, length: 1},
+    {desc: $("#adddesc13").val(), alias: "", coefficient: $("#addcoefficient13").val(), strategy: "GetBit", index: 13, length: 1},
+    {desc: $("#adddesc14").val(), alias: "", coefficient: $("#addcoefficient14").val(), strategy: "GetBit", index: 14, length: 1},
+    {desc: $("#adddesc15").val(), alias: "", coefficient: $("#addcoefficient15").val(), strategy: "GetBit", index: 15, length: 1}
+  ]
+};
+//添加
+$("#add").click(function () {
+
+  var params={};
+  if($("#addstrategy").val()=="GetBit"){
+    params = {
+      seg:JSON.stringify(GetBit),
+      zdb:JSON.stringify(zdb),
+    };
+  }else if($("#addstrategy").val()=="Whole"){
+    params = {
+      seg:JSON.stringify(Whole),
+      zdb:JSON.stringify(zdb),
+    };
+  }
+  $.ajax({
+    type: "post",
+    url: 'http://localhost:3000/con_motor/add/'+$("#componentCode").val()+"/"+$("#templateName").val(),
+    data: params,
+    dataType : "json",
+    success: function (data, status) {
+      if (status == 'success') {
+        console.log(data);
+        location.reload();
+      } else {
+        $(".mobile_err_msg").html(status);
+      }
+    },
+    error: function (status, statusText, errorThrown) {
+      $(".mobile_err_msg").html(statusText);
+      console.log(statusText);
+    }
+  });
+});
+
+///修改确认按钮
+$("#updQR").click(function(){
+
+    var params={};
+    if($("#updstrategy").val()=="GetBit"){
+      params = {
+        seg:JSON.stringify(GetBit),
+        zdb:JSON.stringify(zdb),
+      };
+    }else if($("#updstrategy").val()=="Whole"){
+      params = {
+        seg:JSON.stringify(Whole),
+        zdb:JSON.stringify(zdb),
+      };
+    }
+  var objId = $(this).attr("objId");
+  var zdbobjId = $(this).attr("zdbobjId");
+  $.ajax({
+    type: "post",
+    url: 'http://localhost:3000/con_motor/upd/'+$("#componentCode").val()+"/"+$("#templateName").val()+"/"+objId,
+    dataType : "json",
+    success: function (data, status) {
+      if (status == 'success') {
+        location.reload();
+      } else {
+        $(".mobile_err_msg").html(status);
+      }
+    },
+    error: function (status, statusText, errorThrown) {
+      $(".mobile_err_msg").html(statusText);
+      console.log(statusText);
+    }
+  });
+
+});
+//修改
+$(".upd").click(function(){
+  var objId = $(this).attr("objId");
+  $.ajax({
+    type: "post",
+    url: 'http://localhost:3000/con_motor/upd/'+$("#componentCode").val()+"/"+$("#templateName").val()+"/"+objId,
+    dataType : "json",
+    success: function (data, status) {
+      if (status == 'success') {
+        $("#updisTime option[value='"+data.wfInfo[0].isTime+"']").attr("selected","selected");
+        $("#updaccess_type option[value='"+data.wfInfo[0].access_type+"']").attr("selected","selected");
+        $("#updvarUnit option[value='"+data.wfInfo[0].varUnit+"']").attr("selected","selected");
+
+
+        $("#updparameterId").val(data.wfInfo[0].parameterId+"");
+        $("#updchineseDesc").val(data.wfInfo[0].chaname+"");
+        $("#updmax").val(data.wfInfo[0].max+"");
+        $("#updmin").val(data.wfInfo[0].min+"");
+        if(data.wfInfo[0].ioTag.length>1){
+          $(".updcc").show();
+          $(".upddd").hide();
+          $("#updstrategy option[value='GetBit']").attr("selected","selected");
+          for(var i =0 ;i<data.wfInfo[0].ioTag.length; i++){
+            $("#upddesc"+i).val(data.wfInfo[0].ioTag[i].desc+"");
+          }
+        }else{
+          $(".updcc").hide();
+          $(".upddd").show();
+          $("#updcoefficient").val(data.wfInfo[0].ioTag[0].coefficient+"");
+          $("#upddesc").val(data.wfInfo[0].ioTag[0].desc+"");
+          $("#updstrategy option[value='Whole']").attr("selected","selected");
+        }
+      } else {
+        $(".mobile_err_msg").html(status);
+      }
+    },
+    error: function (status, statusText, errorThrown) {
+      $(".mobile_err_msg").html(statusText);
+      console.log(statusText);
+    }
+  });
+});
+
+
+
+
+
+
+
+
+
+//查看按钮
+$(".cakan").click(function(){
+  var objId = $(this).attr("objId");
+  $.ajax({
+    type: "post",
+    url: 'http://localhost:3000/con_motor/look/'+$("#componentCode").val()+"/"+$("#templateName").val()+"/"+objId,
+    dataType : "json",
+    success: function (data, status) {
+      if (status == 'success') {
+
+         $("#cakanisTime").text((data.wfInfo[0].isTime+"")=="true"?"是":"否");
+         $("#cakanparameterId").text(data.wfInfo[0].parameterId+"");
+         $("#cakanaccess_type").text((data.wfInfo[0].access_type+"")=="0"?"可读":"可写");
+         $("#cakanvarUnit").text(data.wfInfo[0].varunit+"");
+         $("#cakanchineseDesc").text(data.wfInfo[0].chaname+"");
+         $("#cakanmax").text(data.wfInfo[0].max+"");
+         $("#cakanmin").text(data.wfInfo[0].min+"");
+
+         if(data.wfInfo[0].ioTag.length>1){
+               $("#cakanstrategy").text("二进制");
+               $(".cakancc").show();
+               $(".cakandd").hide();
+              for(var i =0 ;i<data.wfInfo[0].ioTag.length; i++){
+                $("#cakandesc"+i).text(data.wfInfo[0].ioTag[i].desc+"");
+              }
+         }else{
+           $(".cakancc").hide();
+           $(".cakandd").show();
+           $("#cakancoefficient").text(data.wfInfo[0].ioTag[0].coefficient+"");
+           $("#cakandesc").text(data.wfInfo[0].ioTag[0].desc+"");
+           $("#cakanstrategy").text("整个");
+         }
+      } else {
+        $(".mobile_err_msg").html(status);
+      }
+    },
+    error: function (status, statusText, errorThrown) {
+      $(".mobile_err_msg").html(statusText);
+      console.log(statusText);
+    }
+  });
+});
+
+
+</script>
+</body>
+</html>

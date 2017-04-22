@@ -1,0 +1,741 @@
+@import url(styles.css);
+/* 全局 */
+body {
+	color: #666;
+}
+.text-light {
+	color: #346ebf;
+}
+.text-dim {
+	color: #aaa !important;
+}
+a:link {
+	color: #346ebf;
+}
+a:visited {
+	color: #346ebf;
+}
+a:hover {
+	color: #346ebf;
+}
+a:active {
+	color: #346ebf;
+}
+.page-header {
+	border-bottom-color: #eee;
+}
+.fan-panel-hd big.text-success,.table .text-success, .info-panel .text-success  {
+	color: #bfa;
+}
+.fan-panel-hd big.text-warning,.table .text-warning, .info-panel .text-warning {
+	color: #ff9;
+}
+.fan-panel-hd big.text-danger,.table .text-danger, .info-panel .text-danger {
+	color: #fba;
+}
+.fan-panel-hd big.text-info,.table .text-info, .info-panel .text-info {
+	color: #aef;
+}
+.fan-panel-hd big.text-muted,.table .text-muted, .info-panel  .text-muted {
+	color: #ccc;
+}
+/* 头部 */
+#header {
+	background-color: #346ebf;
+	border-bottom: 1px solid #333;
+}
+.logo {
+	border-right-color: #3c3c3c;
+}
+.logo a {
+	color: #fff;
+}
+.logo small {
+	border-left-color: #fff;
+	color: #fff;
+}
+.wind-farm-name {
+	border-right-color: #3c3c3c;
+	color: #fff;
+}
+.skin-btn {
+	border-left-color: #3c3c3c;
+}
+.favorite .glyphicon {
+	color: #fff;
+}
+.member-info {
+	border-left-color: #3c3c3c;
+}
+/* 左栏 */
+#aside {
+	background-color: #c2d3ec;
+	border-right: 1px solid	#eee;
+}
+.aside-arrow span.glyphicon {
+	color: #888;
+}
+.sidebar a {
+	background-color: #e3ecf3;
+	color: #666;
+}
+.sidebar a:hover, #aside .sidebar a.active {
+	background-color: #346ebf;
+	color: #fff;
+}
+.sidebar>li>a {
+	background-color: #f9fafc;
+	box-shadow: 0 1px 1px #f1f6f9;
+	color: #346ebf;
+}
+.sidebar>li>ul>li>a {
+	background-color: #f1f6f9;
+	box-shadow: 0 1px 1px #99b6df;
+	color: #346ebf;
+}
+.sidebar>li>a span.glyphicon, .sidebar>li>ul>li>a span.glyphicon {
+	color: #346ebf;
+}
+.sidebar>li>a:hover span.glyphicon, .sidebar>li>ul>li>a:hover span.glyphicon {
+	color: #fff;
+}
+/* 导航（临时） */
+#nav .nav-list>a {
+	border-left-color: #ccc;
+}
+#nav .nav-list>a:nth-last-child(1) {
+	border-right-color: #ccc;
+}
+/* 导航 */
+#nav {
+	background-color: #e5e5e5;
+	border-color: #ccc;
+	color: #333;
+}
+#nav a:link {
+	color: #444;
+}
+#nav a:visited {
+	color: #444;
+}
+#nav a:hover {
+	color: #111;
+}
+#nav .nav-list>li {
+	border-left-color: #ccc;
+}
+#nav .nav-list>li:nth-last-child(1) {
+	border-right-color: #ccc;
+}
+#nav .nav-list a:hover {
+	background-color: #f0f0f0;
+}
+#nav a:active {
+	color: #111;
+}
+#nav .nav-list a.active {
+	background-color: #fff;
+	color: #346ebf;
+}
+#nav .nav-list a.active:hover {
+	background-color: #fff;
+}
+#nav .nav-list>li>ul {
+	border-color: #bbb;
+}
+#nav .nav-list>li>ul>li {
+	border-color: #ccc;
+}
+#nav .nav-list>li>ul a {
+	background-color: #f9f9f9;
+}
+#nav .nav-list>li>ul a:hover {
+	background-color: #fff;
+}
+/* 右栏 */
+#article, #article2, #fanCon, #fanTable {
+	background-color: #fff;
+}
+/* 页脚 */
+#footer {
+	background-color: #346ebf;
+	color: #fff;
+}
+/* 云端首页 */
+.menu-list li a {
+	color: #999;
+}
+.menu-list li a:hover {
+	color: #666;
+}
+.menu-list a .menu-list-icon {
+	color: #fff;
+	background-color: #444;
+	border-color: #777;
+}
+.menu-list a:hover .menu-list-icon {
+	background-color: #777;
+	border-color: #777;
+}
+.menu-list-01 a .menu-list-icon {
+	background-color: #471717;
+	border-color: #8d2d2d;
+}
+.menu-list-02 a .menu-list-icon {
+	background-color: #4a2901;
+	border-color: #935202;
+}
+.menu-list-03 a .menu-list-icon {
+	background-color: #4b3e00;
+	border-color: #967c00;
+}
+.menu-list-04 a .menu-list-icon {
+	background-color: #20321b;
+	border-color: #3f6335;
+}
+.menu-list-05 a .menu-list-icon {
+	background-color: #1f3b43;
+	border-color: #3e7685;
+}
+.menu-list-06 a .menu-list-icon {
+	background-color: #1f2843;
+	border-color: #3e4f85;
+}
+.menu-list-07 a .menu-list-icon {
+	background-color: #2f2341;
+	border-color: #5d4682;
+}
+.menu-list-08 a .menu-list-icon {
+	background-color: #41233c;
+	border-color: #824677;
+}
+.menu-list-01 a:hover .menu-list-icon {
+	background-color: #8d2d2d;
+	border-color: #8d2d2d;
+}
+.menu-list-02 a:hover .menu-list-icon {
+	background-color: #935202;
+	border-color: #935202;
+}
+.menu-list-03 a:hover .menu-list-icon {
+	background-color: #967c00;
+	border-color: #967c00;
+}
+.menu-list-04 a:hover .menu-list-icon {
+	background-color: #3f6335;
+	border-color: #3f6335;
+}
+.menu-list-05 a:hover .menu-list-icon {
+	background-color: #3e7685;
+	border-color: #3e7685;
+}
+.menu-list-06 a:hover .menu-list-icon {
+	background-color: #3e4f85;
+	border-color: #3e4f85;
+}
+.menu-list-07 a:hover .menu-list-icon {
+	background-color: #5d4682;
+	border-color: #5d4682;
+}
+.menu-list-08 a:hover .menu-list-icon {
+	background-color: #824677;
+	border-color: #824677;
+}
+/* 云端风场监控 */
+.cnmap-bg {
+	/*background-color: #f5f5f5;*/
+}
+/* 风场监控 */
+.info-panel {
+	background-color: #346ebf;
+	color: #fff !important;
+}
+.info-panel .text-light, .table .text-light  {
+	color: #ffa;
+}
+.info-panel a {
+	color: #fff;
+}
+.info-panel big.text-light{
+	color: #fff;
+}
+.info-panel .ctrl-btn-group {
+	border-right-color: #fff;
+}
+.info-panel .icon-voice {
+	border-left-color: #fff;
+}
+.fan-sample-con {
+	border-left-color: #fff; 
+}
+.fan-panel-title {
+	background-color: #346ebf;
+	border-color: #fff;
+	color: #fff !important;
+}
+.fan-panel-title dl.dl-horizontal dt {
+	border-right-color: #fff;
+	font-weight: bold;
+}
+.fan-panel-title-hd {	
+	border-right-color: #505050;
+}
+.fan-panel-title span {
+	color: #fff;
+}
+.fan-panel {
+	background-color: #487cc5;
+	color: #fff !important;
+}
+.fan-panel a {
+	color: #fff !important;
+}
+.fan-panel .text-light {
+	color: #fff;
+}
+.fan-panel-hd {
+	background-color: #346ebf;
+	color: #fff;
+}
+.fan-panel-ft {
+	background-color: #346ebf;
+}
+.fan-panel-bd-txt small {
+	color: #fff;	
+}
+/* 服务器监控 */
+.server-panel-title {
+	background-color: #346ebf;
+	border-color: #fff;
+	color: #fff !important;
+}
+.server-panel-title dl.dl-horizontal dt {
+	border-right-color: #fff;
+	font-weight: bold;
+}
+.server-panel-title-hd {	
+	border-right-color: #505050;
+}
+.server-panel-title span {
+	color: #fff;
+}
+.server-panel-group {
+	border-color: #99b6df;
+}
+.server-panel-group-hd {
+	background-color: #eee;
+}
+.server-panel {
+	background-color: #487cc5;
+	color: #fff !important;
+}
+.server-panel a {
+	color: #fff !important;
+}
+.server-panel .text-light {
+	color: #fff;
+}
+.server-panel-hd, .server-panel-ft {
+	background-color: #346ebf;
+	color: #fff;
+}
+/* 分页和表格 */
+#fanTable .fanTable-arrow {
+	background-color: #fafafa;
+	border-top-color: #ddd;
+	border-bottom-color: #eee;
+}
+#fanTable .fanTable-arrow:hover {
+	background-color: #f5f5f5;
+	border-top-color: #e2e2e2;
+	border-bottom-color: #f0f0f0;
+}
+#fanTable .fanTable-arrow:before {
+	border-top-color: #999;
+}
+#fanTable .fanTable-arrow:hover:before {
+	border-top-color: #888;
+}
+#fanTable .fanTable-arrow.up:before {
+	border-bottom-color: #999;
+}
+#fanTable .fanTable-arrow.up:hover:before {
+	border-bottom-color: #888;	
+}
+.fan-page {
+	background-color: rgba(51,110,191,.6);
+}
+.fan-page li {
+	background-color: #000 \9;
+	background-color: rgba(0, 0, 0, 0);
+	border: 1px solid #fff;
+}
+.fan-page .active {
+	background-color: #fff;
+}
+/* 右下角弹出窗 */
+.panel.pop-box {
+	background-color: #fff; 
+}
+.panel .close {
+	color: #fff;
+}
+/* 风机页 */
+.fan-image {
+	background-color: #d7e5f0;
+	border-color: #99b6df;
+}
+/* 集成线路图 */
+.xb-list-4 .xb-block-a:nth-child(5):after {
+	background-color: #fff;
+}
+/* 视频监控 */
+.video-panel {
+	border-color: #99b6df;
+}
+.video-panel-hd {
+	background-color: #eee;
+}
+/* 风资源 */
+.wind-rsc-pan-arrow {
+	background-color: rgba(234,240,246,.8);
+	border-color: #99b6df;
+	color: #444;
+}
+.wind-rsc-pan-cont {
+	background-color: rgba(234,240,246,.8);
+	border-color: #99b6df;
+}
+.time-list {
+	border-color: #99b6df;
+}
+.time-list li.active {
+	background-color: #346ebf;
+}
+/* 表格 */
+.table {
+	background-color: #3e75c2;
+	color: #fff;
+}
+.table a, .panel-heading a {
+	color: #fff;
+}
+.table a:hover, .panel-heading a:hover {
+	color: #c2d3ec;	
+}
+caption {
+	color: #346ebf;
+}
+.table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
+	border-color: #99b6df;
+}
+.table-bordered {
+	border-color: #99b6df;
+}
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+	border-top-color: #fff;
+}
+.table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+	color: #fff;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+	background-color: #346ebf;
+}
+.table-green.table-bordered > thead > tr > th, .table-green.table-bordered > tbody > tr > th, .table-green.table-bordered > tfoot > tr > th, .table-green.table-bordered > thead > tr > td, .table-green.table-bordered > tbody > tr > td, .table-green.table-bordered > tfoot > tr > td {
+	border-color: #bfa;
+}
+.table-green.table > thead > tr > th, .table-green.table > tbody > tr > th, .table-green.table > tfoot > tr > th {
+	color: #bfa;
+}
+.table-green.table > thead > tr > td, .table-green.table > tbody > tr > td, .table-green.table > tfoot > tr > td {
+	color: #bfa;
+}
+.table-yellow.table > thead > tr > th, .table-yellow.table > tbody > tr > th, .table-yellow.table > tfoot > tr > th, .table-yellow.table > thead > tr > td, .table-yellow.table > tbody > tr > td, .table-yellow.table > tfoot > tr > td {
+	border-color: #ff9;
+	color: #ff9;
+}
+.table-yellow.table > thead > tr > th, .table-yellow.table > tbody > tr > th, .table-yellow.table > tfoot > tr > th {
+	color: #ff9;
+}
+.table-yellow.table > thead > tr > td, .table-yellow.table > tbody > tr > td, .table-yellow.table > tfoot > tr > td {
+	color: #ff9;
+}
+.table-red.table-bordered > thead > tr > th, .table-red.table-bordered > tbody > tr > th, .table-red.table-bordered > tfoot > tr > th, .table-red.table-bordered > thead > tr > td, .table-red.table-bordered > tbody > tr > td, .table-red.table-bordered > tfoot > tr > td {
+	border-color: #e5c7c6;
+}
+.table-red.table > thead > tr > th, .table-red.table > tbody > tr > th, .table-red.table > tfoot > tr > th {
+	color: #fba;
+}
+.table-red.table > thead > tr > td, .table-red.table > tbody > tr > td, .table-red.table > tfoot > tr > td {
+	color: #fba;
+}
+.table-hover > tbody > tr:hover {
+	background-color: #5d8bcc;
+	color: #fff;
+}
+/*.btn-top-bottom a:link {
+	color: #ccc;
+}
+.btn-top-bottom a:visited {
+	color: #999;
+}
+.btn-top-bottom a:hover {
+	color: #999;
+}
+.btn-top-bottom a:active {
+	color: #999;
+}
+.btn-top-bottom a.active {
+	color: #999;
+}*/
+.table > thead > tr > td.primary,
+.table > tbody > tr > td.primary,
+.table > tfoot > tr > td.primary,
+.table > thead > tr > th.primary,
+.table > tbody > tr > th.primary,
+.table > tfoot > tr > th.primary,
+.table > thead > tr.primary > td,
+.table > tbody > tr.primary > td,
+.table > tfoot > tr.primary > td,
+.table > thead > tr.primary > th,
+.table > tbody > tr.primary > th,
+.table > tfoot > tr.primary > th {
+	background-color: #428bca;
+}
+.table-hover > tbody > tr > td.primary:hover,
+.table-hover > tbody > tr > th.primary:hover,
+.table-hover > tbody > tr.primary:hover > td,
+.table-hover > tbody > tr:hover > .primary,
+.table-hover > tbody > tr.primary:hover > th {
+	background-color: #569ad7;
+}
+.table > thead > tr > td.active,
+.table > tbody > tr > td.active,
+.table > tfoot > tr > td.active,
+.table > thead > tr > th.active,
+.table > tbody > tr > th.active,
+.table > tfoot > tr > th.active,
+.table > thead > tr.active > td,
+.table > tbody > tr.active > td,
+.table > tfoot > tr.active > td,
+.table > thead > tr.active > th,
+.table > tbody > tr.active > th,
+.table > tfoot > tr.active > th {
+  background-color: #737373;
+}
+.table-hover > tbody > tr > td.active:hover,
+.table-hover > tbody > tr > th.active:hover,
+.table-hover > tbody > tr.active:hover > td,
+.table-hover > tbody > tr:hover > .active,
+.table-hover > tbody > tr.active:hover > th {
+  background-color: #868686;
+}
+.table > thead > tr > td.success,
+.table > tbody > tr > td.success,
+.table > tfoot > tr > td.success,
+.table > thead > tr > th.success,
+.table > tbody > tr > th.success,
+.table > tfoot > tr > th.success,
+.table > thead > tr.success > td,
+.table > tbody > tr.success > td,
+.table > tfoot > tr.success > td,
+.table > thead > tr.success > th,
+.table > tbody > tr.success > th,
+.table > tfoot > tr.success > th {
+  background-color: #758370;
+}
+.table-hover > tbody > tr > td.success:hover,
+.table-hover > tbody > tr > th.success:hover,
+.table-hover > tbody > tr.success:hover > td,
+.table-hover > tbody > tr:hover > .success,
+.table-hover > tbody > tr.success:hover > th {
+  background-color: #889482;
+}
+.table > thead > tr > td.info,
+.table > tbody > tr > td.info,
+.table > tfoot > tr > td.info,
+.table > thead > tr > th.info,
+.table > tbody > tr > th.info,
+.table > tfoot > tr > th.info,
+.table > thead > tr.info > td,
+.table > tbody > tr.info > td,
+.table > tfoot > tr.info > td,
+.table > thead > tr.info > th,
+.table > tbody > tr.info > th,
+.table > tfoot > tr.info > th {
+  background-color: #6c7e84;
+}
+.table-hover > tbody > tr > td.info:hover,
+.table-hover > tbody > tr > th.info:hover,
+.table-hover > tbody > tr.info:hover > td,
+.table-hover > tbody > tr:hover > .info,
+.table-hover > tbody > tr.info:hover > th {
+  background-color: #7f8f95;
+}
+.table > thead > tr > td.warning,
+.table > tbody > tr > td.warning,
+.table > tfoot > tr > td.warning,
+.table > thead > tr > th.warning,
+.table > tbody > tr > th.warning,
+.table > tfoot > tr > th.warning,
+.table > thead > tr.warning > td,
+.table > tbody > tr.warning > td,
+.table > tfoot > tr.warning > td,
+.table > thead > tr.warning > th,
+.table > tbody > tr.warning > th,
+.table > tfoot > tr.warning > th {
+  background-color: #807b69;
+}
+.table-hover > tbody > tr > td.warning:hover,
+.table-hover > tbody > tr > th.warning:hover,
+.table-hover > tbody > tr.warning:hover > td,
+.table-hover > tbody > tr:hover > .warning,
+.table-hover > tbody > tr.warning:hover > th {
+  background-color: #928e7c;
+}
+.table > thead > tr > td.danger,
+.table > tbody > tr > td.danger,
+.table > tfoot > tr > td.danger,
+.table > thead > tr > th.danger,
+.table > tbody > tr > th.danger,
+.table > tfoot > tr > th.danger,
+.table > thead > tr.danger > td,
+.table > tbody > tr.danger > td,
+.table > tfoot > tr.danger > td,
+.table > thead > tr.danger > th,
+.table > tbody > tr.danger > th,
+.table > tfoot > tr.danger > th {
+  background-color: #827070;
+}
+.table-hover > tbody > tr > td.danger:hover,
+.table-hover > tbody > tr > th.danger:hover,
+.table-hover > tbody > tr.danger:hover > td,
+.table-hover > tbody > tr:hover > .danger,
+.table-hover > tbody > tr.danger:hover > th {
+  background-color: #948282;
+}
+.table-sample-icon {
+	border-color: #99b6df;
+}
+.table-sample-icon.table-sample-icon-primary {
+	background-color: #428bca;
+}
+.table-sample-icon.table-sample-icon-active {
+	background-color: #505050;
+}
+.table-sample-icon.table-sample-icon-success {
+	background-color: #565d53;
+}
+.table-sample-icon.table-sample-icon-info {
+	background-color: #4f595d;
+}
+.table-sample-icon.table-sample-icon-warning {
+	background-color: #fcf8e3;
+}
+.table-sample-icon.table-sample-icon-danger {
+	background-color: #5b5151;
+}
+/* 面板 */
+.panel-default > .panel-heading {
+	background-color: #346ebf;
+	background-image: none;
+ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3e75c2', endColorstr='#ff346ebf', GradientType=0);
+	border-color: #99b6df;
+	color: #fff;
+}
+.panel-heading label {
+	color: #fff;
+}
+.panel-default {
+	border-color: #99b6df;
+}
+.panel-footer {
+	border-top-color: #99b6df;
+}
+.list-group-item {
+	background-color: transparent;
+	border-color: #99b6df;
+}
+a.list-group-item:hover, a.list-group-item:focus {
+	background-color: #bed9f1;
+}
+.panel-group .panel-heading + .panel-collapse > .list-group, .panel-group .panel-heading + .panel-collapse > .panel-body {
+	border-top: 1px solid #99b6df;
+}
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+	background-color: #346ebf;
+	border-color: #346ebf;
+	background-image: none;
+	border-color: transparent;
+	text-shadow: none;
+}
+.panel-title>.small, .panel-title>.small>a, .panel-title>a, .panel-title>small, .panel-title>small>a {
+	color: inherit;
+}
+/* 标签 */
+.nav-tabs {
+	border-bottom-color: #99b6df;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+	background-color: #fff;
+	border-color : #99b6df;
+	border-bottom-color: transparent;
+}
+/* well */
+.well {
+	background-color: #c2d3ec;
+    border: 1px solid #99b6df;
+}
+/* 按钮 */
+button.btn-primary {
+	color: #346ebf !important;
+	background-color: #487cc5;
+	background-image: none;
+	border-color: #99b6df
+}
+.btn-primary.focus, .btn-primary:focus {
+	color: #346ebf;
+	background-color: #5d8bcc;
+	border-color: #99b6df
+}
+.btn-primary:hover {
+	color: #346ebf;
+	background-color: #5d8bcc;
+	border-color: #99b6df
+}
+.btn-primary.active, .btn-primary:active, .open>.dropdown-toggle.btn-primary {
+	color: #346ebf;
+	background-color: #5d8bcc;
+	border-color: #99b6df
+}
+.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open>.dropdown-toggle.btn-primary.focus, .open>.dropdown-toggle.btn-primary:focus, .open>.dropdown-toggle.btn-primary:hover {
+	color: #346ebf;
+	background-color: #5d8bcc;
+	border-color: #99b6df
+}
+.btn-primary.active, .btn-primary:active, .open>.dropdown-toggle.btn-primary {
+	background-image: none
+}
+.btn-primary.disabled, .btn-primary.disabled.active, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary[disabled], .btn-primary[disabled].active, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled]:focus, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary.active, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:hover {
+	background-color: #5d8bcc;
+	border-color: #99b6df
+}
+.btn-primary .badge {
+	color: #5d8bcc;
+	background-color: #99b6df
+}
+.btn-link {
+  color: #346ebf;
+}
+.btn-link:hover,
+.btn-link:focus {
+  color: #5cb85c;
+}
+/* 徽章 */
+.badge {
+    background-color: #346ebf;
+}
+/* 404页 */
+.bg-404 {
+	background-color: #fff;
+}

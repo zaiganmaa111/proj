@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="Author" content="F.Fang">
+	<meta name="Language" scheme="Language Codes" content="zh-CN">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>上海电气智能风电</title>
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/images/favicon.png" type="image/png">
+	<!-- Bootstrap -->
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<link href="/css/skin-black.css" rel="stylesheet" id="skinCss">
+	<!-- mCustomScrollbar 滚动条 -->
+	<link href="/css/jquery.mCustomScrollbar.css" rel="stylesheet">
+	<link rel="stylesheet" href="/css/deploy.css"/>
+	<link rel="stylesheet" href="/css/model.css"/>
+</head>
+<body>
+<!-- ***** HEADER ***** -->
+
+
+<!--  -----------------------------------look----------------------------------------------------------->
+<header id="header">
+	<div class="logo pull-left"><a href="云端-首页.html" title="上海电气智能风电风云">
+		<img src="/images/logo.png" width="120" height="30" alt="上海电气"> 智能风电
+		<img src="/images/logo-fengyun.png" width="40" height="30" alt="风云"></a>
+		<small>智能监控系统</small>
+	</div>
+	<div class="wind-farm-name pull-left"><img src="tmp/user-logo.jpg"> 临港风电场</div>
+	<div class="member-info pull-right">
+		<span href="#">张三</span>
+		<span class="dropdown">
+			<a href="javascript:;" title="信息" class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+				 aria-haspopup="true" aria-expanded="true">
+				<span class="glyphicon glyphicon-envelope"></span><sup class="red-dot"></sup>
+			</a>
+		<ul class="dropdown-menu dropdown-menu-right">
+			<li><a href="javascript:;">信息第一条</a></li>
+			<li><a href="javascript:;">我是第二条信息</a></li>
+			<li><a href="javascript:;">点我点我！我是No.3</a></li>
+			<li><a href="javascript:;">我是最后一条</a></li>
+			<li role="separator" class="divider"></li>
+			<li><a href="javascript:;">查看全部消息</a></li>
+		</ul>
+		</span>
+		<a href="#" class="glyphicon glyphicon-cog" title="设置"></a> <a href="本地风场-登录页.html"
+																																	 class="glyphicon glyphicon-log-out" title="退出"></a>
+	</div>
+	<ul class="skin-btn list-inline pull-right">
+		<li id="skinBlack" class="skin-btn-black active" title="黑"></li>
+		<li id="skinWhite" class="skin-btn-white" title="白"></li>
+		<li id="skinCyan" class="skin-btn-cyan" title="青"></li>
+		<li id="skinBlue" class="skin-btn-blue" title="蓝"></li>
+		<li id="skinGreen" class="skin-btn-green" title="绿"></li>
+		<li id="skinRed" class="skin-btn-red" title="红"></li>
+	</ul>
+</header>
+<!-- -------------------------------------look，------------------------------------------- -->
+
+
+<!-- ***** /HEADER ***** -->
+<!-- ***** ASIDE ***** -->
+<aside id="aside">
+	<div class="aside-arrow"><span class="glyphicon glyphicon-menu-left"></span></div>
+	<ul class="sidebar">
+		<li>
+			<a href="javascript:;" class="active">
+
+				系统总览
+			</a>
+		</li>
+		<li><a href="#"><span class="pull-right glyphicon glyphicon-plus-sign"></span>参数列表</a>
+			<ul>
+				<li>
+					<a href="#">全局搜索</a>
+				</li>
+				<li><a href="#">观察</a></li>
+				<li><a href="#">01--电机参数</a></li>
+				<li><a href="#">02--定子监视</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">配置树</a>
+		</li>
+
+	</ul>
+</aside>
+<!-- ***** /ASIDE ***** -->
+<!-- ***** NAV ***** -->
+<nav id="nav" class="nav-md">
+	<div class="bread-crumb"><strong>当前位置：</strong> <a href="云端-首页.html">云端首页</a> &gt; <a href="云端-智能监控-风场监控-视图.html">变流器监控</a>
+	</div>
+	<ul class="nav-list clearfix">
+		<li><a href="javascript:;"><span class="glyphicon glyphicon-eye-open"></span> 监控 <span class="caret"></span></a>
+			<ul>
+				<li><a href="本地风场-监控-风场页-视图.html"><span class="glyphicon glyphicon-eye-open"></span> 实时监控</a></li>
+				<li><a href="本地风场-能量管理-能量控制.html"><span class="glyphicon glyphicon-tasks"></span> 能量管理</a></li>
+				<li><a href="本地风场-实时对比.html"><span class="glyphicon glyphicon-equalizer"></span> 实时对比</a></li>
+			</ul>
+		</li>
+		<li><a href="本地风场-视频监控-首页.html"><span class="glyphicon glyphicon-facetime-video"></span> 视频监控</a></li>
+		<li><a href="本地风场-故障-故障处理.html"><span class="glyphicon glyphicon-alert"></span> 故障</a></li>
+		<li><a href="#"><span class="glyphicon glyphicon-th"></span> 报表</a></li>
+		<li><a href="本地风场-配置-风场配置-MODBUS发布模板.html"><span class="glyphicon glyphicon-th-list"></span> 配置</a></li>
+		<li><a href="本地风场-管理-分数据中心-认证.html"><span class="glyphicon glyphicon-cog"></span> 管理</a></li>
+		<li><a href="本地风场-健康值.html"><span class="glyphicon glyphicon-dashboard"></span> 健康值</a></li>
+		<li><a href="本地风场-CMS-图表.html"><span class="glyphicon glyphicon-copyright-mark"></span> CMS</a></li>
+		<li><a href="本地风场-风场介绍.html"><span class="glyphicon glyphicon-list-alt"></span> 风场介绍</a></li>
+	</ul>
+</nav>
+<!-- ***** /NAV ***** -->
+<!-- ***** ARTICLE ***** -->
+<article id="article" class="article-md clearfix">
+	<!-- MAIN -->
+	<div class="main clearfix">
+		<!--左侧的搜索-->
+		<div class="left-aside">
+			<div class="form-horizontal" style="height:30px;">
+				<input type="search" placeholder="全局搜索" id="search" data-provide="typeahead" class="input-color input-width"
+							 data-items="4"/>
+				<button class="btn btn-primary btn-sm btn-show btn-width">
+					<span class="glyphicon glyphicon-search"></span> 搜索
+				</button>
+
+			</div>
+
+			<ul class="left-sidebar">
+				<%transformer.cs.forEach(function(fitems){%>
+				<li id="component" class="selector" data-id = "<%= fitems._id%>" data-parameterId = "<%= fitems.parameterId%>" data-desc = "<%= fitems.desc%>">
+					<span class="title-name"><%= fitems.desc%></span>
+				</li>
+				<%})%>
+			</ul>
+		</div>
+		<!--左侧的搜索-->
+		<!--中间的搜索-->
+		<div class="center-aside">
+			<div class="center-title">型号搜索</div>
+			<div class="form-horizontal search-box">
+				<input type="search" placeholder="型号搜索" id="searchBox" data-provide="typeahead"  class="input-color center-width" data-items="4"/>
+				<button class="btn btn-primary btn-sm btn-show center-btn-width">
+					<span class="glyphicon glyphicon-search"></span> 搜索
+				</button>
+				<button class="btn btn-primary btn-sm btn-absolute" type="button">浏览上传
+					<input style="position:absolute;top:0;left:0;opacity: 0;filter: alpha(opacity=0);width: 100%;height: 100%;" type="file" name="fileToUpload" id="fileToUpload" class="fileupload"/>
+					<input type="text" id="base64Data"/>
+				</button>
+				<button id="save" class="btn btn-primary btn-sm" style="display: none;position: absolute;right: 430px;top: 0px;">保存配置</button>
+			</div>
+			<div id="droppable" style="margin: 10px 2px 0 2px;border: 1px solid #999;height: 400px">
+				<img id="baseImg" style="display: none;" width="100%" src="" alt=""/>
+			</div>
+		</div>
+		<!--中间的搜索-->
+		<!--右侧型号表-->
+		<aside class="right-aisde">
+			<div class="right-title">型号表</div>
+			<ul class="right-sidebar  mCustomScrollbar" data-mcs-theme="3d">
+				<%transformer.xh.forEach(function(items,index){%>
+					<li class="typeCode" value="<%= items.name%>" data-id="<%=items._id%>"><%= items.name%></li>
+				<%})%>
+				<input type="text" value="" id="nameData"/>
+				<input type="text" value="" id="transformerId"/>
+			</ul>
+		</aside>
+		<!--右侧型号表-->
+	</div>
+</article>
+<!-- ***** /ARTICLE ***** -->
+<!-- ***** FOOTER ***** -->
+<footer id="footer">版权所有 © 2015-2020 上海电气风电设备有限公司 建议使用IE9+ 浏览器 1280*1024 以上分辨率</footer>
+<!-- ***** /FOOTER ***** -->
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="/js/jquery-1.11.2.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/js/jquery.cookie.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<!-- mCustomScrollbar 滚动条 -->
+<script src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!--图表-->
+<script src="/js/echarts.js"></script>
+<!-- 全局 -->
+<script src="/js/script.js"></script>
+<script src="/js/setTop.js"></script>
+<script src="/js/jquery-ui.min.js"></script>
+
+<!–[if IE]>
+<script src="/js/html5.js"></script>
+<![endif]–>
+<script src="/js/bootstrap3-typeahead.js"></script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript">
+	var subjects = ['F02600012', 'F026000199', 'F026000194', 'F02600013', 'F02600012', 'F02600010', 'F02600011', 'F02600018', 'F02600019'];
+	$('#searchBox').typeahead({source: subjects});
+
+	//点击型号
+	$(".typeCode").click(function () {
+		$("#baseImg").removeAttr("src");
+		var data = {
+			typeValue: $(this).attr("value"),
+			transformerId: $(this).attr("data-id")
+		}
+		$.ajax({
+			url: '/con_homePage/apply/getImg',
+			type: 'POST',
+			data: data,
+			success: function (data) {
+				$("#baseImg").show().attr("src", "data:image/png;base64," + data.result.data.lineImageUrl);
+				$("#nameData").val(data.typeValue);
+				$("#transformerId").val(data.transformerId);
+			},
+			error: function () {
+				console.log('error');
+			}
+		});
+	});
+	//点击上传
+	$('.fileupload').change(function (event) {
+		var fileName = $('.fileupload').val();
+		console.log('imageUrl', fileName);
+		/* Act on the event */
+		if ($('.fileupload').val().length) {
+			if (FileReader) {//chrome浏览器处理
+				var reader = new FileReader(),
+						file = this.files[0];
+				reader.onload = function (e) {
+					var code = e.target.result;
+					$("#baseImg").show().attr("src", code);
+					//截取data:image/png;base64
+					var base64Data = code.replace(/^data:image\/\w+;base64,/, "");
+					$("#base64Data").attr("value", base64Data);
+					//这里是把图片转成64位数据
+				};
+				reader.readAsDataURL(file);
+			}
+		}
+	})
+	;
+
+</script>
+
+
+<!-- 拖拽  -->
+<script type="text/javascript">
+	$(function () {
+		//保存
+		/*var selectorCount = [];//保存拖入droppable的数组
+		$("#save").click(function () {
+			selectorCount = [];
+			var imageData = $("#base64Data").attr("value");
+			var imageSrc = $("#baseImg").attr("src");
+			var value = $(".selector").attr("value");
+			if (imageSrc == undefined || imageSrc == null || imageSrc == '') {
+				alert("请上传图片")
+			} else {
+				//判断li是否存在value位1的值
+				var list = document.getElementsByClassName('selector');
+				var rel = [];
+				var i;
+
+				for (i = 0; i < list.length; ++i) {
+					if (list[i].value == '1') {
+						rel.push(list[i]);
+					}
+				}
+				//判断li是否存在value位1的值
+				if (rel.length <= 0) {
+					alert("请选择部件");
+				} else {
+					$("[value=1]").each(function (index, items) {
+						var dataOne = {
+							"_id": $(this).attr("data-id"),
+							"x": $(this).attr("data-top"),
+							"y": $(this).attr("data-left"),
+							"desc": $(this).attr("data-desc")
+						}
+
+						selectorCount.push(dataOne);
+					});
+					var MODEL_LINE_CONFIGURATION = {
+						"transformerKey": $("#nameData").val(),
+						"lineImageUrl": imageSrc,
+						"parameterIds": JSON.stringify(selectorCount),
+						"transformerId": $("#transformerId").val()
+					};
+					console.log("MODEL_LINE_CONFIGURATION data=>" + JSON.stringify(MODEL_LINE_CONFIGURATION));
+					$.ajax({
+						url: '/con_homePage/apply/upload',
+						type: 'POST',
+						data: MODEL_LINE_CONFIGURATION,
+						success: function (data) {
+							alert("配置成功")
+							console.log(data);
+						},
+						error: function () {
+							console.log('error');
+						}
+					});
+				}
+			}
+		});*/
+		var nowcs = [];
+		var selonecs = function(){
+			$.ajax({
+				url: '/con_homePage/getOneIoTag',
+				type: 'POST',
+				data: {"nowcs":(nowcs+"")},
+				dataType:'json',
+				success: function (data) {
+					alert(data);
+				},
+				error: function () {
+					console.log('error');
+				}
+			});
+		}
+		//拖拽
+		$(".selector").draggable({
+			scroll: false,
+			revert: "invalid",
+			zIndex: 1000,
+			containment: "#droppable",
+			cursor: "move",
+			cursorAt: {top: 20, left: 100},
+			stop: function () {
+				$(this).attr("data-top", $(this).position().top);
+				$(this).attr("data-left", $(this).position().left);
+				$("#save").show();
+				if($.inArray($(this).attr("data-id"), nowcs)==-1){
+					nowcs.push($(this).attr("data-id"));//已经配置的存放数组
+				}
+				selonecs();
+
+
+				/*$(this).attr("value", "1");
+				$(this).dblclick(function () {
+					$(this).remove();
+					$(this).removeAttr("value");
+				});*/
+			}
+		});
+		//框
+		$("#droppable").droppable({
+			drop: function () {
+				$(this).css({"border": "1px solid #fff"});
+			}
+		});
+	});
+</script>
+</body>
+</html>

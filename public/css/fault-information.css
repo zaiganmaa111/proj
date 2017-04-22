@@ -1,0 +1,95 @@
+.fault-state{
+	display:inline-block;
+	width:20px;
+	height:20px;
+	background-color:#0DD0F3;
+	border-radius:4px;
+	vertical-align: middle;
+}
+.fault-reason{
+	margin:0px;
+	padding:0px 0px 10px 0px;
+	overflow:hidden;
+	border-bottom:1px solid #444;
+}
+.fault-reason-list{
+	list-style:none;
+	float:left;
+	width:20%;
+	text-align:center;
+}
+.fault-reason-top{
+	display:block;
+	width:15px;
+	height:15px;
+	background-color:#0DD0F3;
+	margin:0px auto;
+	border-radius:50%;
+}
+.warn-top{
+	width:20px;
+	height:20px;
+}
+.fault-reason-title{
+	display:block;
+	width:100px;
+	margin:0px auto;
+	text-align:center;
+	margin-top:10px;
+	padding:0px 15px;
+	/*background-color:#006DB6;*/	
+}
+
+
+.fault-bottom{
+	margin:0px;
+	padding:0px 0px 10px 0px;
+	overflow:hidden;
+}
+.fault-bottom-list{
+	list-style:none;
+	float:left;
+	width:25%;
+	text-align:center;
+}
+.fault-bottom-top{
+	display:block;
+	width:25px;
+	height:25px;
+	background-color:#0DD0F3;
+	margin:0px auto;
+	border-radius:50%;
+}
+
+.fault-bottom-title{
+	display:block;
+	width:100px;
+	margin:0px auto;
+	text-align:center;
+	margin-top:10px;
+	padding:0px 15px;
+	
+}
+.canv-container,.canv{
+	width:1250px;
+	margin:20px auto;
+	display:block;
+}
+.canv-container{
+	position:relative;
+	
+}
+.canvs-title{
+	position:absolute;
+	top:220px;
+	left:0px;
+}
+.canvs-list{
+	list-style:none;
+	height:20px;
+	margin:10px 0px;
+}
+/*.title-input{
+	width:60px;
+	height:20px;
+}*/

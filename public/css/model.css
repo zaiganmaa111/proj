@@ -1,0 +1,125 @@
+.main {
+	height: 100%;
+	width: 100%;
+	position: relative;
+
+}
+
+.right-aisde {
+	top: 0px;
+	bottom: 0px;
+	overflow: auto;
+	right: 0px;
+	width: 180px;
+	position: absolute;
+	overflow: hidden;
+}
+
+.right-title {
+	height: 45px;
+	padding-left: 14px;
+	text-align: left;
+	line-height: 45px;
+}
+
+.right-sidebar {
+	padding: 0px;
+	margin: 0px;
+	position: absolute;
+	top: 45px;
+	left: 0px;
+	width: 100%;
+	bottom: 0px;
+}
+
+.right-sidebar li {
+	padding: 12px 12px;
+	font-size: 0.8em;
+	list-style: none;
+	margin: 1px 0px;
+	text-align: center;
+}
+
+.left-aside {
+	width: 200px;
+	position: absolute;
+	top: 12px;
+	bottom: 0px;
+	left: 12px;
+}
+
+.input-width {
+	width: 140px;
+}
+
+.btn-width {
+	width: 60px;
+	margin: 0px;
+}
+
+.left-sidebar {
+	position: absolute;
+	top: 40px;
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	z-index: 10;
+}
+
+.left-sidebar li {
+	width: 100%;
+	padding: 12px 12px;
+	font-size: 0.8em;
+	list-style: none;
+	margin: 1px 0px;
+	text-align: center;
+}
+
+.center-aside {
+	/*width:200px;*/
+	position: absolute;
+	top: 12px;
+	bottom: 0px;
+	right: 188px;
+	left: 220px;
+	/*border:1px solid red;*/
+}
+
+.center-title {
+	width: 400px;
+	margin: 30px auto 10px auto;
+	text-align: center;
+	line-height: 30px;
+}
+
+.search-box {
+	width: 400px;
+	margin: 0px auto;
+	height: 30px;
+	position: relative;
+}
+
+.center-width {
+	width: 340px;
+	outline: none;
+}
+
+.center-btn-width {
+	width: 60px;
+	margin: 0px;
+}
+
+.btn-absolute {
+	position: absolute;
+	right: -100px;
+	top: 0px;
+}
+
+/*搜索显示的下拉列表*/
+.dropdown-menu {
+	width: 100%;
+	border-radius: 0px;
+
+}
