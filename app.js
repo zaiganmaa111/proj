@@ -103,9 +103,9 @@ server.listen(4000, function () {
 
 io.sockets.on('connection', function (socket) {
     socket.emit('news', { hello: 'world' });//前端通过socket.on("news")获取
-    socket.on('current_value', function (data) {//前端通过socket.emit('paper')发送
+    socket.on('current_value', function (redisKey) {//前端通过socket.emit('paper')发送
         redisHelp.redis_init(function (redisclient) {
-            redisclient.HGETALL(data, function (data) {
+            redisclient.HGETALL(redisKey, function (data) {
 
 
                 socket.emit('current_value', data);
