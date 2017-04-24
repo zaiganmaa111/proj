@@ -1,11 +1,14 @@
-/*mongodbÈý·½Ä£¿é·â×°·½·¨*/
+/*mongodbï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½*/
 var MongoClient = require('mongodb').MongoClient;
 
 var url = 'mongodb://oudot.vicp.io:12307/mina_demo';
 var mongoInit = function (collectName, collectAction) {
 	MongoClient.connect(url, function (err, db) {
 		//assert.equal(null, err);
-
+		// db.collection(collectName, function(err,col)
+		// {
+		// 	col.update()
+		// })
 		console.log("Connected correctly to server.");
 		db.collection(collectName, collectAction);
 		db.close();
