@@ -68,13 +68,15 @@ var add_to_tree_q = function (vname, _id, callback) {
 
 var test_for_monitor_q = function (uid, callback) {
     var deffered = Q.defer();
-    mongoHelp.mongoInit("PERMISSIONS_TREE", function (err, collection) {
-        console.log("in");
-        collection.findOne({ "uid": uid }, { "uuid": 'monitor' }, function (err, doc) {
-            if (doc == null) {
-                var time = new Date().toTimeString();
-                mongoHelp.mongoInit("PERMISSIONS_TREE", function (err, incol) {
-                    incol.insertOne(
+    mongoHelp.mongoInitWithDb().then(function (err_db) {
+        var db = err_db.db;
+        db.collection("PERMISSIONS_TREE", function (err, collection) {
+            console.log("in");
+                            //deffered.resolve("r.insertedId");
+            collection.findOne({ "uid": uid }, { "uuid": 'monitor' }, function (err, doc) {
+                if (doc == null) {
+                    var time = new Date().toTimeString();
+                    collection.insertOne(
                         {
                             tree_name: "观察",
                             var_name: [],
@@ -86,17 +88,53 @@ var test_for_monitor_q = function (uid, callback) {
                             caidan_name: "观察",
                             istrue: false
                         }, function (err, r) {
+                            db.close();
                             deffered.resolve(r.insertedId);
                         })
-                })
-            } else {
-                deffered.resolve(doc._id);
-            }
+
+                } else {
+                    db.close();
+                    deffered.resolve(doc._id);
+                }
+            })
         })
-    });
+    })
 
     return deffered.promise.nodeify(callback);
 }
+
+
+// var test_for_monitor_q = function (uid, callback) {
+//     var deffered = Q.defer();
+//     mongoHelp.mongoInit("PERMISSIONS_TREE", function (err, collection) {
+//         console.log("in");
+//         collection.findOne({ "uid": uid }, { "uuid": 'monitor' }, function (err, doc) {
+//             if (doc == null) {
+//                 var time = new Date().toTimeString();
+//                 mongoHelp.mongoInit("PERMISSIONS_TREE", function (err, incol) {
+//                     incol.insertOne(
+//                         {
+//                             tree_name: "观察",
+//                             var_name: [],
+//                             createTime: time,
+//                             updateTime: time,
+//                             tree_id: 'monitor',
+//                             uid: uid,
+//                             caidan_name_hash: '',
+//                             caidan_name: "观察",
+//                             istrue: false
+//                         }, function (err, r) {
+//                             deffered.resolve(r.insertedId);
+//                         })
+//                 })
+//             } else {
+//                 deffered.resolve(doc._id);
+//             }
+//         })
+//     });
+
+//     return deffered.promise.nodeify(callback);
+// }
 
 var add_cons_q = function (_id, tag_index, update, tree_oid, callback) {
     var deffered = Q.defer();
@@ -123,8 +161,7 @@ var add_cons_q = function (_id, tag_index, update, tree_oid, callback) {
                             })
                         })
                 })
-            }else
-            {
+            } else {
                 deffered.resolve("")
             }
         })
@@ -572,9 +609,9 @@ router.delete('/menu/:oid', function (req, res) {
 
 });
 // add_cons_q = function (_id, templateName, tag_index, update, tree_oid,
-router.post('/cons/:id/:tag_index/:tree_oid', function(req,res){
+router.post('/cons/:id/:tag_index/:tree_oid', function (req, res) {
     add_cons_q(req.params.id, req.params.tag_index, req.body, req.params.tree_oid).then(
-        function(result){
+        function (result) {
             res.send(result);
         }
     )

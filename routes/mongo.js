@@ -1,5 +1,6 @@
 /*mongodb����ģ����װ����*/
 var MongoClient = require('mongodb').MongoClient;
+var Q = require('q');
 
 var url = 'mongodb://oudot.vicp.io:12307/mina_demo';
 var mongoInit = function (collectName, collectAction) {
@@ -16,8 +17,21 @@ var mongoInit = function (collectName, collectAction) {
 }
 
 var mongoHelp = {
+	mongoInitWithDb: function (callback) {
+		var deffer = Q.defer();
+		MongoClient.connect(url, function (err, db) {
+			//assert.equal(null, err);
+			// db.collection(collectName, function(err,col)
+			// {
+			// 	col.update()
+			// })
+			console.log("Connected correctly to server.");
+			deffer.resolve({err : err, db: db});
+		});
+		return deffer.promise.nodeify(callback);
+	},
 	myurl: url,
-	inczdb : function(valueInfo){
+	inczdb: function (valueInfo) {
 		var result = new Object();
 		mongoInit("DATA_DICTIONARY", function (err, collection) {
 			console.log("in");
@@ -26,13 +40,13 @@ var mongoHelp = {
 			})
 		});
 	},
-	updGetBitsegaddzdb:   function (valueInfo, act) {
+	updGetBitsegaddzdb: function (valueInfo, act) {
 		var result = new Object();
 		mongoInit("AMS_TAGS_INFO", function (err, collection) {
 			collection.findOneAndUpdate({
-					"tags.templateName" : valueInfo.templateName,
-					"tags.componentCode" :valueInfo.componentCode
-				}, {
+				"tags.templateName": valueInfo.templateName,
+				"tags.componentCode": valueInfo.componentCode
+			}, {
 					$push: {
 						'tags.0.segment': {
 							"_id": new ObjectId(),
@@ -42,21 +56,21 @@ var mongoHelp = {
 							"isTime": valueInfo.seg.isTime,
 							"access_type": valueInfo.seg.access_type,
 							"name": valueInfo.seg.name,
-							"ioTag":[{
-									"desc": valueInfo.seg.ioTag[0].desc,
-									"alias": valueInfo.seg.ioTag[0].alias,
-									"coefficient":valueInfo.seg.ioTag[0].coefficient,
-									"strategy": valueInfo.seg.ioTag[0].strategy,
-									"index": 0,
-									"length": 16
-								}
+							"ioTag": [{
+								"desc": valueInfo.seg.ioTag[0].desc,
+								"alias": valueInfo.seg.ioTag[0].alias,
+								"coefficient": valueInfo.seg.ioTag[0].coefficient,
+								"strategy": valueInfo.seg.ioTag[0].strategy,
+								"index": 0,
+								"length": 16
+							}
 							]
 						}
 					}
 				}
 				, function (err, r) {
 					result.message = "updated";
-					if(!err){
+					if (!err) {
 						mongoInit("DATA_DICTIONARY", function (err, collection) {
 							console.log("in");
 							collection.insertOne(valueInfo.zdb, function (err, doc) {
@@ -120,14 +134,14 @@ var mongoHelp = {
 
 		mongoInit(collectName, function (err, collection) {
 			console.log("in");
-			collection.findOneAndUpdate({_id: value._id}
-					, {$set: value.body}
-					, function (err, r) {
-						//assert.equal(null, err);
-						//assert.equal(1, r.lastErrorObject.n);
-						result.message = "updated";
-						act(result);
-					});
+			collection.findOneAndUpdate({ _id: value._id }
+				, { $set: value.body }
+				, function (err, r) {
+					//assert.equal(null, err);
+					//assert.equal(1, r.lastErrorObject.n);
+					result.message = "updated";
+					act(result);
+				});
 
 		});
 	},
@@ -137,14 +151,14 @@ var mongoHelp = {
 
 		mongoInit(collectName, function (err, collection) {
 			console.log("in");
-			collection.findOneAndDelete({_id: value._id}
-					, function (err, r) {
-						//assert.equal(null, err);
-						//assert.equal(1, r.lastErrorObject.n);
+			collection.findOneAndDelete({ _id: value._id }
+				, function (err, r) {
+					//assert.equal(null, err);
+					//assert.equal(1, r.lastErrorObject.n);
 
-						result.message = "deleted";
-						act(result);
-					});
+					result.message = "deleted";
+					act(result);
+				});
 
 		});
 	}
