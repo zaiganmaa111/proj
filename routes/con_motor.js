@@ -49,7 +49,53 @@ var add_to_monitor_q = function (uid, vname, tree_uuid, callback) {
     return deffered.promise.nodeify(callback);
 }
 
+var get_menu_var_q = function (_oid, uid, callback) {
+    var deffered = Q.defer();
+    var oid = new ObjectId(_oid);
+    mongoHelp.mongoInit("PERMISSIONS_TREE", function (err, collection) {
+        console.log("in");
 
+        var m = collection.findOne({ _id: oid, uid: uid }, function (err, doc) {
+
+            deffered.resolve(doc.var_name);
+
+        })
+    })
+    return deffered.promise.nodeify(callback);
+}
+
+var get_segments_q = function (templateName, vnset, callback) {
+    var deffered = Q.defer();
+    mongoHelp.mongoInit("AMS_TAGS_INFO", function (err, collection) {
+        console.log("in");
+
+        var m = collection.findOne({}, function (err, doc) {
+            //assert.equal(err, null);
+            //assert.equal(doc.length, 1);
+            var md = doc.tags.map(function (e, index) {
+                e.index = index
+                return e;
+            }).filter(function (e) {
+                return e.templateName == templateName
+            })[0];
+
+            md.segment = md.segment.map(function (e, index) {
+                e.index = index
+                return e
+            }).filter(function (e) {
+                return vnset.indexOf(e.name) > -1
+            })
+            deffered.resolve(md);
+            // var m = doc[0].tags[0].segment.filter(function(e){
+            // return vnset.indexOf(e.name) > -1
+        })
+        // console.log(m)
+        // deffered.resolve(doc[0].tags[0].segment.filter(function(e, oindex){
+        //     return vnset.indexOf(e.name) > -1
+        // }) );
+    })
+    return deffered.promise.nodeify(callback);
+}
 
 
 var add_to_tree_q = function (vname, _id, callback) {
@@ -72,8 +118,8 @@ var test_for_monitor_q = function (uid, callback) {
         var db = err_db.db;
         db.collection("PERMISSIONS_TREE", function (err, collection) {
             console.log("in");
-                            //deffered.resolve("r.insertedId");
-            collection.findOne({ "uid": uid }, { "uuid": 'monitor' }, function (err, doc) {
+            //deffered.resolve("r.insertedId");
+            collection.findOne({ "uid": uid, "tree_id": 'monitor' }, function (err, doc) {
                 if (doc == null) {
                     var time = new Date().toTimeString();
                     collection.insertOne(
@@ -84,8 +130,7 @@ var test_for_monitor_q = function (uid, callback) {
                             updateTime: time,
                             tree_id: 'monitor',
                             uid: uid,
-                            caidan_name_hash: '',
-                            caidan_name: "观察",
+                            menu_name: "观察",
                             istrue: false
                         }, function (err, r) {
                             db.close();
@@ -214,6 +259,38 @@ var del_cons_q = function (_id, tag_index, seg_id, var_name, callback) {
 
 
     });
+
+    return deffered.promise.nodeify(callback);
+}
+
+var get_user_tree_q = function (uid, callback) {
+    var deffered = Q.defer();
+    mongoHelp.mongoInit("PERMISSIONS_TREE", function (err, collection) {
+        console.log("in");
+        collection.find(
+            {
+                uid: uid
+            }).toArray(function (err, doc) {
+                var dd = doc.map(function (e) {
+                    return e.tree_name;
+                    // return {
+                    //     turbine: curTurbine,
+                    //     ipno: curTurbine.Ipno
+                    // };
+                }).sort().filter(function (item, pos, ary) {
+                    return !pos || item != ary[pos - 1];
+                });
+                var result = dd.map(function (tree_name) {
+                    var o = new Object();
+                    o[tree_name] = doc.filter(function (item) {
+                        return item.tree_name == tree_name;
+                    })
+                    return o;
+                }
+                );
+                deffered.resolve(result);
+            })
+    })
 
     return deffered.promise.nodeify(callback);
 }
@@ -616,5 +693,22 @@ router.post('/cons/:id/:tag_index/:tree_oid', function (req, res) {
         }
     )
 });
+
+router.get('/menu/cons/:templateName/:uid/:tree_id', function (req, res) {
+    get_menu_var_q(req.params.tree_id, req.params.uid).then(function (data) {
+        get_segments_q(req.params.templateName, data).then(
+            function (result) {
+                res.send(result);
+            }
+        )
+    })
+});
+
+router.get('/tree/menus/:uid', function (req, res) {
+    get_user_tree_q(req.params.uid).then(function (data) {
+        res.send(data);
+    })
+});
+
 
 module.exports = router;
